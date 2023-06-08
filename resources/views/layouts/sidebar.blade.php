@@ -1,151 +1,114 @@
-<div class="col-md-3 left_col">
-    <div class="left_col scroll-view">
-        <div class="navbar nav_title" style="border: 0;">
-            <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella
-                    Alela!</span></a>
-        </div>
-
-        <div class="clearfix"></div>
-
-        <!-- menu profile quick info -->
-        <div class="profile clearfix">
-            <div class="profile_pic">
-                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
-            </div>
-            <div class="profile_info">
-                <span>Welcome,</span>
-                <h2>John Doe</h2>
-            </div>
-        </div>
-        <!-- /menu profile quick info -->
-
-        <br />
-
-        <!-- sidebar menu -->
-        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-            <div class="menu_section">
-                <h3>General</h3>
-                <ul class="nav side-menu">
-                    <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="index.html">Dashboard</a></li>
-                            <li><a href="index2.html">Dashboard2</a></li>
-                            <li><a href="index3.html">Dashboard3</a></li>
-                        </ul>
-                    </li>
-                    <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="form.html">General Form</a></li>
-                            <li><a href="form_advanced.html">Advanced Components</a></li>
-                            <li><a href="form_validation.html">Form Validation</a></li>
-                            <li><a href="form_wizards.html">Form Wizard</a></li>
-                            <li><a href="form_upload.html">Form Upload</a></li>
-                            <li><a href="form_buttons.html">Form Buttons</a></li>
-                        </ul>
-                    </li>
-                    <li><a><i class="fa fa-desktop"></i> UI Elements <span
-                                class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="general_elements.html">General Elements</a></li>
-                            <li><a href="media_gallery.html">Media Gallery</a></li>
-                            <li><a href="typography.html">Typography</a></li>
-                            <li><a href="icons.html">Icons</a></li>
-                            <li><a href="glyphicons.html">Glyphicons</a></li>
-                            <li><a href="widgets.html">Widgets</a></li>
-                            <li><a href="invoice.html">Invoice</a></li>
-                            <li><a href="inbox.html">Inbox</a></li>
-                            <li><a href="calendar.html">Calendar</a></li>
-                        </ul>
-                    </li>
-                    <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="tables.html">Tables</a></li>
-                            <li><a href="tables_dynamic.html">Table Dynamic</a></li>
-                        </ul>
-                    </li>
-                    <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span
-                                class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="chartjs.html">Chart JS</a></li>
-                            <li><a href="chartjs2.html">Chart JS2</a></li>
-                            <li><a href="morisjs.html">Moris JS</a></li>
-                            <li><a href="echarts.html">ECharts</a></li>
-                            <li><a href="other_charts.html">Other Charts</a></li>
-                        </ul>
-                    </li>
-                    <li><a><i class="fa fa-clone"></i>Layouts <span class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="fixed_sidebar.html">Fixed Sidebar</a></li>
-                            <li><a href="fixed_footer.html">Fixed Footer</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="menu_section">
-                <h3>Live On</h3>
-                <ul class="nav side-menu">
-                    <li><a><i class="fa fa-bug"></i> Additional Pages <span
-                                class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="e_commerce.html">E-commerce</a></li>
-                            <li><a href="projects.html">Projects</a></li>
-                            <li><a href="project_detail.html">Project Detail</a></li>
-                            <li><a href="contacts.html">Contacts</a></li>
-                            <li><a href="profile.html">Profile</a></li>
-                        </ul>
-                    </li>
-                    <li><a><i class="fa fa-windows"></i> Extras <span
-                                class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="page_403.html">403 Error</a></li>
-                            <li><a href="page_404.html">404 Error</a></li>
-                            <li><a href="page_500.html">500 Error</a></li>
-                            <li><a href="plain_page.html">Plain Page</a></li>
-                            <li><a href="login.html">Login Page</a></li>
-                            <li><a href="pricing_tables.html">Pricing Tables</a></li>
-                        </ul>
-                    </li>
-                    <li><a><i class="fa fa-sitemap"></i> Multilevel Menu <span
-                                class="fa fa-chevron-down"></span></a>
-                        <ul class="nav child_menu">
-                            <li><a href="#level1_1">Level One</a>
-                            <li><a>Level One<span class="fa fa-chevron-down"></span></a>
-                                <ul class="nav child_menu">
-                                    <li class="sub_menu"><a href="level2.html">Level Two</a>
-                                    </li>
-                                    <li><a href="#level2_1">Level Two</a>
-                                    </li>
-                                    <li><a href="#level2_2">Level Two</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="#level1_2">Level One</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Landing Page <span
-                                class="label label-success pull-right">Coming Soon</span></a></li>
-                </ul>
-            </div>
-
-        </div>
-        <!-- /sidebar menu -->
-
-        <!-- /menu footer buttons -->
-        <div class="sidebar-footer hidden-small">
-            <a data-toggle="tooltip" data-placement="top" title="Settings">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+<nav class="iq-sidebar-menu">
+    <ul id="iq-sidebar-toggle" class="iq-menu">
+        <li class="active">
+            <a href="backend/index.html" class="svg-icon">
+                <svg class="svg-icon" id="p-dash1" width="20" height="20"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                    </path>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+                <span class="ml-4">Beranda</span>
             </a>
-            <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+        </li>
+        <li class=" ">
+            <a href="#product" class="collapsed" data-toggle="collapse" aria-expanded="false">
+                <svg class="svg-icon" id="p-dash2" width="20" height="20"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <span class="ml-4">Kelola Pengguna</span>
+                <svg class="svg-icon iq-arrow-right arrow-active" width="20" height="20"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="10 15 15 20 20 15"></polyline>
+                    <path d="M4 4h7a4 4 0 0 1 4 4v12"></path>
+                </svg>
             </a>
-            <a data-toggle="tooltip" data-placement="top" title="Lock">
-                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+            <ul id="product" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                <li class="">
+                    <a href="backend/page-list-product.html">
+                        <i class="las la-minus"></i><span>Data Pengguna</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class=" ">
+            <a href="#category" class="collapsed" data-toggle="collapse" aria-expanded="false">
+                <svg class="svg-icon" id="p-dash3" width="20" height="20"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="9" y="9" width="13" height="13"
+                        rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span class="ml-4"> Kelola Respondents</span>
+                <svg class="svg-icon iq-arrow-right arrow-active" width="20" height="20"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="10 15 15 20 20 15"></polyline>
+                    <path d="M4 4h7a4 4 0 0 1 4 4v12"></path>
+                </svg>
             </a>
-            <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
-                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+            <ul id="category" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                <li class="">
+                    <a href="{{ route('respondent.index') }}">
+                        <i class="las la-minus"></i><span>Data Respondents</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="backend/page-list-category.html">
+                        <i class="las la-minus"></i><span>Jawaban Respondents</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class=" ">
+            <a href="#sale" class="collapsed" data-toggle="collapse" aria-expanded="false">
+                <svg class="svg-icon" id="p-dash4" width="20" height="20"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                    <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+                </svg>
+                <span class="ml-4">Kuesioner</span>
+                <svg class="svg-icon iq-arrow-right arrow-active" width="20" height="20"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="10 15 15 20 20 15"></polyline>
+                    <path d="M4 4h7a4 4 0 0 1 4 4v12"></path>
+                </svg>
             </a>
-        </div>
-        <!-- /menu footer buttons -->
-    </div>
-</div>
+            <ul id="sale" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                <li class="">
+                    <a href="backend/page-list-sale.html">
+                        <i class="las la-minus"></i><span>Data Kuesioner</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class=" ">
+            <a href="#purchase" class="collapsed" data-toggle="collapse" aria-expanded="false">
+                <svg class="svg-icon" id="p-dash5" width="20" height="20"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="1" y="4" width="22" height="16"
+                        rx="2" ry="2"></rect>
+                    <line x1="1" y1="10" x2="23" y2="10"></line>
+                </svg>
+                <span class="ml-4">Laporan</span>
+</nav>

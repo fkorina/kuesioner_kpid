@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('questionnaire_options', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->comment('pertanyaan');
+            $table-> bigInteger('questionnaire_id')->comment('foreign key questionnaire');
             $table->timestamps();
         });
     }

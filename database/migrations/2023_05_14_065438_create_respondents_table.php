@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('respondents', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->comment('nama');
+            $table->string('gender')->comment('jenis kelamin');
+            $table->string('phone')->comment('no hp');
+            $table->string('job')->comment('pekerjaan');
+            $table->integer('age')->comment('umur');
+            $table->string('last_education')->comment('pendidikan terakhir');
+            $table->bigInteger('income')->comment('penghasilan');
+            $table->string('city')->comment('kabupaten/kota');
             $table->timestamps();
         });
     }

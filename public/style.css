@@ -1,0 +1,52 @@
+section {
+  padding-top: 4rem;
+}
+
+#tentang,
+#pimpinan,
+#profilhmj,
+#kegiatan {
+  background-color: #f582eb;
+}
+
+h1,
+.pimpinanmi,
+.hmj,
+.kegiatan,
+h4 {
+  color: white;
+}
+
+.list-item {
+  list-style: none;
+}
+
+#visi,
+#D3,
+#D4,
+#struktur,
+#kontak {
+  background-color: whitesmoke;
+}
+
+hr {
+  margin: auto;
+}
+
+#wz,
+#by,
+#cr,
+#ar,
+#rz,
+#ln,
+#zw,
+#sl,
+#kr,
+#tl,
+#jt,
+#aa,
+#nl,
+#pk,
+#bph {
+  object-fit: contain;
+}
