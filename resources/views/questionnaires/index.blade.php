@@ -5,38 +5,42 @@
 
 @section('content')
     <div class="row">
-        <div class="col-md-12 col-sm-12  ">
-            <div class="x_panel">
-                <div class="x_title">
-                    <h2><b>Data Kuesioner</b></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                        <li>
-                            <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                        </li>
-                    </ul>
-                    <a href="{{ route('questionnaire.create') }}" class="btn btn-outline-success btn-sm ml-5">Tambah Data</a>
-                    <div class="clearfix"></div>
-                </div>
-
-                <div class="x_content">
-                    <div class="table-responsive">
-                        <table class="table table-striped data_table table-bordered" style="width:100%">
-                            <thead>
-                                <tr class="headings">
-                                    <th class="column-title">No </th>
-                                    <th class="column-title">Aksi </th>
-                                    <th class="column-title">Pertanyaan </th>
-                                    <th class="column-title">Dibuat pada </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            </tbody>
-                        </table>
+        <div class="col-md-12 mb-4 mt-1">
+            <div class="d-flex flex-wrap justify-content-between align-items-center">
+                <h4 class="font-weight-bold">Kuesioner</h4>
+            </div>
+        </div>
+        <div class="col-lg-12 col-md-12">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between">
+                            <div class="header-title">
+                                <h4 class="card-title">Manajemen Kuesioner</h4>
+                            </div>
+                            <a class="text-end btn btn-sm btn-outline-info" href="{{ route('questionnaire.create') }}"><i
+                                    class="fa fa-plus"></i> Tambah Data</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table id="data-table" class="table table-striped table-bordered" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Aksi</th>
+                                            <th>pertanyaan</th>
+                                            <th>Diinput pada</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 @endsection
 
@@ -49,7 +53,7 @@
         let data_table = "";
 
         function getDatatable() {
-            data_table = $(".data_table").DataTable({
+            data_table = $("#data-table").DataTable({
                 ajax: {
                     url: "{{ route('questionnaire.datatable') }}",
                 },

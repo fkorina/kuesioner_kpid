@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Questionnaire;
+use App\Models\QuestionnaireOption;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
@@ -46,8 +47,7 @@ class QuestionnaireController extends Controller
 
     public function create()
     {
-        $questionnaire = Questionnaire::all();
-        return view('questionnaires.add', compact('questionnaire'));
+        return view('questionnaires.add');
     }
 
     public function edit($id)
@@ -64,12 +64,29 @@ class QuestionnaireController extends Controller
         try {
             DB::beginTransaction();
 
-            $request->validate([]);
+            $request->validate([
+                'question' => 'required'
+            ]);
 
             // Create Data
             $input = $request->all();
 
-            Questionnaire::create($input);
+            $questionnaire = Questionnaire::create($input);
+
+
+            // Create Questionnaire Option
+            if ($request->name) {
+                $questionnaire_option = $request->input('name', []);
+
+                for ($i  = 0; $i < count($questionnaire_option); $i++) {
+                    if ($questionnaire_option[$i] != "") {
+                        QuestionnaireOption::create([
+                            'questionnaire_id' => $questionnaire->id,
+                            'question' => $request->name[$i]
+                        ]);
+                    }
+                }
+            }
 
             // Save Data
             DB::commit();

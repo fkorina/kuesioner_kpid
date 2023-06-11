@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\RespondentController;
 use App\Http\Controllers\QuestionnaireController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\RoleController;
 
 
 /*
@@ -42,8 +44,8 @@ Route::group(['controller' => RespondentController::class, 'prefix' => 'responde
 
 // Questionnaire
 Route::group(['controller' => QuestionnaireController::class, 'prefix' => 'questionnaire', 'as' => 'questionnaire.'], function () {
-    Route::get('/datatable', 'datatable')->name('datatable');
     Route::get('/', 'index')->name('index');
+    Route::get('/datatable', 'datatable')->name('datatable');
     Route::get('/create', 'create')->name('create');
     Route::get('/edit/{id}', 'edit')->name('edit');
     Route::post('/store', 'store')->name('store');
@@ -75,7 +77,3 @@ Route::group(['controller' => RoleController::class, 'prefix' => 'role', 'as' =>
     Route::put('/update/{id}', 'update')->name('update');
     Route::delete('/destroy/{id}', 'destroy')->name('destroy');
 });
-
-
-
-

@@ -62,7 +62,7 @@
                                                     <h5 class="mb-1">{{ Auth::user()->name }}</h5>
                                                     <p class="mb-0"></p>
                                                     <div class="d-flex align-items-center justify-content-center mt-3">
-                                                        <a href="{{ route('logout') }} "
+                                                        <a href="{{ route('logout') }} " class="btn btn-outline-danger"
                                                             onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();"
                                                             class="btn border">Keluar</a>

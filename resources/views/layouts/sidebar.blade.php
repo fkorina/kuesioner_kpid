@@ -12,7 +12,7 @@
         <nav class="iq-sidebar-menu">
             <ul id="iq-sidebar-toggle" class="iq-menu">
                 <li class="active">
-                    <a href="../backend/index.html" class="svg-icon">
+                    <a href="{{ route('home') }}" class="svg-icon">
                         <svg class="svg-icon" id="p-dash1" width="20" height="20"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -45,11 +45,10 @@
                     </a>
                     <ul id="people" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                         <li class="">
-                            <a href="../backend/page-list-customers.html"> <i
-                                    class="las la-minus"></i><span>Pengguna</span> </a>
+                            <a href="{{ route('user.index') }}"> <i class="las la-minus"></i><span>Pengguna</span> </a>
                         </li>
                         <li class="">
-                            <a href="../backend/page-list-users.html"> <i class="las la-minus"></i><span>Peran</span>
+                            <a href="{{ route('role.index') }}"> <i class="las la-minus"></i><span>Peran</span>
                             </a>
                         </li>
                     </ul>
@@ -73,7 +72,7 @@
                     </a>
                     <ul id="respondent" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                         <li class="">
-                            <a href="../backend/page-list-customers.html"> <i class="las la-minus"></i><span>Data
+                            <a href="{{ route('respondent.index') }}"> <i class="las la-minus"></i><span>Data
                                     Responden</span> </a>
                         </li>
                         <li class="">
@@ -84,7 +83,7 @@
                     </ul>
                 </li>
                 <li class="">
-                    <a href="../backend/page-report.html" class="">
+                    <a href="{{ route('questionnaire.index') }}" class="">
                         <svg class="svg-icon" id="p-dash13" width="20" height="20"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

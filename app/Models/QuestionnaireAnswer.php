@@ -10,4 +10,9 @@ class QuestionnaireAnswer extends Model
     use HasFactory;
 
     protected $guarded = ['id'];
+
+    public function questionnaire()
+    {
+        return $this->belongsTo(Questionnaire::class, 'questionnaire_id', 'id');
+    }
 }
