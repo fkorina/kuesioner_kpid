@@ -44,7 +44,7 @@
                                                             <input class="floating-input form-control" type="text"
                                                                 name="name" value="{{ old('name') }}">
                                                             <label>Username</label>
-                                                            @error('name')
+                                                            @error('email')
                                                                 <span class="text-danger">
                                                                     {{ $message }}
                                                                 </span>
@@ -54,12 +54,13 @@
                                                     <div class="col-lg-12">
                                                         <div class="floating-label form-group">
                                                             <input class="floating-input form-control" name="password"
-                                                                type="password" value="{{ old('password') }}">
-                                                            @error('password')
+                                                                type="password" value= "{{ old('password') }}">
+                                                                @error('password')
                                                                 <span class="text-danger">
                                                                     {{ $message }}
                                                                 </span>
-                                                            @enderror
+
+                                                                @enderror
                                                             <label>Kata Sandi</label>
                                                         </div>
                                                     </div>
@@ -67,13 +68,12 @@
                                                 </div>
                                                 <button type="submit" class="btn btn-primary">Masuk</button>
 
-                                                
                                                 </p>
                                             </form>
                                         </div>
                                     </div>
                                     <div class="col-lg-5 content-right">
-                                        <img src="{{ asset('posdash/assets/images/login/01.png') }}"
+                                        <img src="{{ asset('posdash/assets/images/login/SIENDRA.png') }}"
                                             class="img-fluid image-right" alt="">
                                     </div>
                                 </div>
