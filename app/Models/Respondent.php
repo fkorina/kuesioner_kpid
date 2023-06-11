@@ -11,4 +11,10 @@ class Respondent extends Model
     use HasFactory;
 
     protected $guarded = ['id'];
+
+    const REGENCY_PALEMBANG = "Palembang";
+
+    const REGENCY_CHOICE = [
+        self::REGENCY_PALEMBANG => self::REGENCY_PALEMBANG
+    ];
 }

@@ -41,10 +41,10 @@
                                                 <div class="row">
                                                     <div class="col-lg-12">
                                                         <div class="floating-label form-group">
-                                                            <input class="floating-input form-control" type="email"
-                                                                name="email" value="{{ old('email') }}">
-                                                            <label>Email</label>
-                                                            @error('email')
+                                                            <input class="floating-input form-control" type="text"
+                                                                name="name" value="{{ old('name') }}">
+                                                            <label>Username</label>
+                                                            @error('name')
                                                                 <span class="text-danger">
                                                                     {{ $message }}
                                                                 </span>
@@ -54,13 +54,12 @@
                                                     <div class="col-lg-12">
                                                         <div class="floating-label form-group">
                                                             <input class="floating-input form-control" name="password"
-                                                                type="password" value= "{{ old('password') }}">
-                                                                @error('password')
+                                                                type="password" value="{{ old('password') }}">
+                                                            @error('password')
                                                                 <span class="text-danger">
                                                                     {{ $message }}
                                                                 </span>
-
-                                                                @enderror
+                                                            @enderror
                                                             <label>Kata Sandi</label>
                                                         </div>
                                                     </div>
