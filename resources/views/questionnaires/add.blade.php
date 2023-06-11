@@ -13,7 +13,15 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('questionnaire.store') }}" method="post">
+                    @if (session('error'))
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <strong>Error!</strong> {{ session('error') }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    @endif
+                    <form action="{{ route('questionnaire.store') }}" method="POST">
                         @csrf
                         <div class="form-group mb-3">
                             <label for="question">Pertanyaan</label>

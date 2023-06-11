@@ -82,7 +82,7 @@ class QuestionnaireController extends Controller
                     if ($questionnaire_option[$i] != "") {
                         QuestionnaireOption::create([
                             'questionnaire_id' => $questionnaire->id,
-                            'question' => $request->name[$i]
+                            'name' => $request->name[$i]
                         ]);
                     }
                 }
