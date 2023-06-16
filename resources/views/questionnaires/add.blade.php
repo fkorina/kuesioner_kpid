@@ -101,7 +101,6 @@
                     let id = $(this).attr('id');
                     let dig = parseInt(id.substring(1));
                     $(this).attr('id', `row${dig - 1}`);
-
                 });
 
                 $(this).closest('tr').remove();
