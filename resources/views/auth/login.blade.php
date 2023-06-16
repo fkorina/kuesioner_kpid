@@ -43,8 +43,8 @@
                                                         <div class="floating-label form-group">
                                                             <input class="floating-input form-control" type="text"
                                                                 name="name" value="{{ old('name') }}">
-                                                            <label>Username</label>
-                                                            @error('email')
+                                                            <label>Nama</label>
+                                                            @error('name')
                                                                 <span class="text-danger">
                                                                     {{ $message }}
                                                                 </span>
