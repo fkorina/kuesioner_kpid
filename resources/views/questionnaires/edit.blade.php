@@ -18,8 +18,9 @@
                             </button>
                         </div>
                     @endif
-                    <form action="{{ route('questionnaire.store') }}" method="POST">
+                    <form action="{{ route('questionnaire.update', $data['id']) }}" method="POST">
                         @csrf
+                        @method('put')
                         <div class="form-group mb-3">
                             <label for="question">Pertanyaan</label>
                             <input id="question" type="text" name="question" class="form-control"
@@ -56,13 +57,18 @@
                                                         </tr>
                                                     </thead>
                                                     <tbody id="tbody">
+                                                        @php
+                                                            $i = 0;
+                                                        @endphp
                                                         @foreach ($data['questionnaire_options'] as $item)
-                                                            <tr id="row${++rowIndex}">
+                                                            <tr id="row{{ $i++ }}">
                                                                 <td class="text-center">
                                                                     <button type="button" class="btn btn-danger remove"><i
                                                                             class="fas fa-trash mr-2"></i> Hapus</button>
                                                                 </td>
                                                                 <td>
+                                                                    <input type="hidden" name="questionnaire_option_id[]"
+                                                                        value="{{ $item['id'] }}">
                                                                     <input class="form-control" type="text"
                                                                         name="name[]" placeholder="Masukkan Opsi Jawaban"
                                                                         value="{{ $item['name'] }}" required>
@@ -92,14 +98,15 @@
 
         // Option Question
         function initQuestionnaireOption() {
-            let rowIndex = 0;
+            let rowIndex = <?php echo count($data['questionnaire_options']); ?>;
 
             $("#btn_add").click(function() {
-                $("#tbody").append(`<tr id="row${++rowIndex}">
+                $("#tbody").append(`<tr id="row${rowIndex++}">
                 <td class="text-center">
                 <button type="button" class="btn btn-danger remove"><i class="fas fa-trash mr-2"></i> Hapus</button>
                 </td>
                 <td>
+                <input name="questionnaire_option_id[]" type="hidden" value="">
                 <input class="form-control" type="text" name="name[]" placeholder="Masukkan Opsi Jawaban" required>
                 </td>
                 </tr>`);

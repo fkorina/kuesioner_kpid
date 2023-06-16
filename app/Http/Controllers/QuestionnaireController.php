@@ -72,16 +72,12 @@ class QuestionnaireController extends Controller
 
 
             // Create Questionnaire Option
-            if ($request->name) {
-                $questionnaire_option = $request->input('name', []);
-
-                for ($i  = 0; $i < count($questionnaire_option); $i++) {
-                    if ($questionnaire_option[$i] != "") {
-                        QuestionnaireOption::create([
-                            'questionnaire_id' => $questionnaire->id,
-                            'name' => $request->name[$i]
-                        ]);
-                    }
+            if ($questionnaire_option_name = $request->name) {
+                for ($i  = 0; $i < count($questionnaire_option_name); $i++) {
+                    QuestionnaireOption::create([
+                        'questionnaire_id' => $questionnaire->id,
+                        'name' => $request->name[$i]
+                    ]);
                 }
             }
 
@@ -113,24 +109,32 @@ class QuestionnaireController extends Controller
 
             $questionnaire->update($input);
 
-            $id_questionnaire = [];
-            
+            // Questionnaire Option
+            if ($questionnaire_option_id = $request->questionnaire_option_id) {
+                for ($i  = 0; $i < count($questionnaire_option_id); $i++) {
+                    if ($questionnaire_option_id[$i] !== null) {
+                        // Update Questionnaire Option
+                        $questionnaire_option = QuestionnaireOption::find($questionnaire_option_id[$i]);
+                        $questionnaire_option->update([
+                            'questionnaire_id' => $questionnaire->id,
+                            'name' => $request->name[$i]
+                        ]);
 
-            // Create Questionnaire Option
-            if ($request->name) {
-                $questionnaire_option = $request->input('name', []);
-
-                for ($i  = 0; $i < count($questionnaire_option); $i++) {
-                    if ($questionnaire_option[$i] != "") {
+                        // Delete Data
+                        QuestionnaireOption::where('questionnaire_id', $id)
+                            ->whereNotIn('id', $questionnaire_option_id)
+                            ->delete();
+                    } else {
+                        // Create New Questionnaire Option
                         QuestionnaireOption::create([
                             'questionnaire_id' => $questionnaire->id,
                             'name' => $request->name[$i]
                         ]);
-                    }else{
-
                     }
                 }
             }
+
+
             // Save Data
             DB::commit();
 
