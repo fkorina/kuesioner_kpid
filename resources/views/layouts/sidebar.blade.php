@@ -96,8 +96,9 @@
                     </a>
                     <ul id="reports" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle"></ul>
                 </li>
-                <li class="">
-                    <a href="../backend/page-report.html" class="">
+
+                <li class=" ">
+                    <a href="#laporan" class="collapsed" data-toggle="collapse" aria-expanded="false">
                         <svg class="svg-icon" id="p-dash7" width="20" height="20"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -115,21 +116,20 @@
                             <path d="M4 4h7a4 4 0 0 1 4 4v12"></path>
                         </svg>
                     </a>
-                    <ul id="respondent" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                    <ul id="laporan" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                         <li class="">
                             <a href="{{ route('respondent.index') }}"> <i class="las la-minus"></i><span>Data
                                     Responden</span> </a>
                         </li>
                         <li class="">
-                            <a href="../backend/page-list-users.htm"> <i class="las la-minus"></i><span> Data Jawaban
-                                    Responden</span>
+                            <a href="../backend/page-list-users.html"> <i class="las la-minus"></i><span>Jawaban
+                                    Kuesioner</span>
                             </a>
                         </li>
                     </ul>
-                    </a>
-
-                    <ul id="reports" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle"></ul>
                 </li>
+
+
             </ul>
         </nav>
     </div>
