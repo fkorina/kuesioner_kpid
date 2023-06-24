@@ -31,12 +31,10 @@ class QuestionnaireController extends Controller
                 return $formatedDate;
             })
             ->addColumn('action', function ($data) {
-                $url_show = route('questionnaire.show', $data->id);
                 $url_edit = route('questionnaire.edit', $data->id);
                 $url_delete = route('questionnaire.destroy', $data->id);
 
                 $btn = "<div class='btn-group'>";
-                // $btn .= "<a href='$url_show' class = 'btn btn-outline-primary btn-sm text-nowrap'><i class='fas fa-info mr-2'></i> Lihat</a>";
                 $btn .= "<a href='$url_edit' class = 'btn btn-outline-info btn-sm text-nowrap'><i class='fas fa-edit mr-2'></i> Edit</a>";
                 $btn .= "<a href='$url_delete' class = 'btn btn-outline-danger btn-sm text-nowrap' data-confirm-delete='true'><i class='fas fa-trash mr-2'></i> Hapus</a>";
                 $btn .= "</div>";
@@ -54,7 +52,6 @@ class QuestionnaireController extends Controller
     {
 
         $data = Questionnaire::find($id);
-
 
         return view('questionnaires.edit', compact('data',));
     }
@@ -75,16 +72,12 @@ class QuestionnaireController extends Controller
 
 
             // Create Questionnaire Option
-            if ($request->name) {
-                $questionnaire_option = $request->input('name', []);
-
-                for ($i  = 0; $i < count($questionnaire_option); $i++) {
-                    if ($questionnaire_option[$i] != "") {
-                        QuestionnaireOption::create([
-                            'questionnaire_id' => $questionnaire->id,
-                            'name' => $request->name[$i]
-                        ]);
-                    }
+            if ($questionnaire_option_name = $request->name) {
+                for ($i  = 0; $i < count($questionnaire_option_name); $i++) {
+                    QuestionnaireOption::create([
+                        'questionnaire_id' => $questionnaire->id,
+                        'name' => $request->name[$i]
+                    ]);
                 }
             }
 
@@ -113,6 +106,34 @@ class QuestionnaireController extends Controller
             $questionnaire = Questionnaire::find($id);
 
             $input = $request->all();
+
+            $questionnaire->update($input);
+
+            // Questionnaire Option
+            if ($questionnaire_option_id = $request->questionnaire_option_id) {
+                for ($i  = 0; $i < count($questionnaire_option_id); $i++) {
+                    if ($questionnaire_option_id[$i] !== null) {
+                        // Update Questionnaire Option
+                        $questionnaire_option = QuestionnaireOption::find($questionnaire_option_id[$i]);
+                        $questionnaire_option->update([
+                            'questionnaire_id' => $questionnaire->id,
+                            'name' => $request->name[$i]
+                        ]);
+
+                        // Delete Data
+                        QuestionnaireOption::where('questionnaire_id', $id)
+                            ->whereNotIn('id', $questionnaire_option_id)
+                            ->delete();
+                    } else {
+                        // Create New Questionnaire Option
+                        QuestionnaireOption::create([
+                            'questionnaire_id' => $questionnaire->id,
+                            'name' => $request->name[$i]
+                        ]);
+                    }
+                }
+            }
+
 
             // Save Data
             DB::commit();

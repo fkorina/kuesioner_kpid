@@ -97,17 +97,14 @@
                     </a>
                     <ul id="reports" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle"></ul>
                 </li>
-
                 <li class=" ">
-                    <a href="#laporan" class="collapsed" data-toggle="collapse" aria-expanded="false">
-                        <svg class="svg-icon" id="p-dash7" width="20" height="20"
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                            <polyline points="14 2 14 8 20 8"></polyline>
-                            <line x1="16" y1="13" x2="8" y2="13"></line>
-                            <line x1="16" y1="17" x2="8" y2="17"></line>
-                            <polyline points="10 9 9 9 8 9"></polyline>
+                    <a href="#report" class="collapsed" data-toggle="collapse" aria-expanded="false">
+                        <svg class="svg-icon" id="p-dash10" width="20" height="20"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="8.5" cy="7" r="4"></circle>
+                            <polyline points="17 11 19 13 23 9"></polyline>
                         </svg>
                         <span class="ml-4">Laporan</span>
                         <svg class="svg-icon iq-arrow-right arrow-active" width="20" height="20"
@@ -117,7 +114,7 @@
                             <path d="M4 4h7a4 4 0 0 1 4 4v12"></path>
                         </svg>
                     </a>
-                    <ul id="laporan" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
+                    <ul id="report" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                         <li class="">
                             <a href="{{ route('respondent.index') }}"> <i class="las la-minus"></i><span>Data
                                     Responden</span> </a>

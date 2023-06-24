@@ -11,12 +11,12 @@ class Questionnaire extends Model
 
     protected $guarded = ['id'];
 
-    public function quistionnaire_options()
+    public function questionnaire_options()
     {
         return $this->hasMany(QuestionnaireOption::class, 'questionnaire_id', 'id');
     }
 
-    public function quistionnaire_answers()
+    public function questionnaire_answers()
     {
         return $this->hasMany(QuestionnaireAnswer::class, 'questionnaire_id', 'id');
     }

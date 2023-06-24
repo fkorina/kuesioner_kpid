@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-
-
 @section('content')
     <div class="row">
         <div class="col-sm-12 col-lg-12 col-md-12">
@@ -20,8 +18,9 @@
                             </button>
                         </div>
                     @endif
-                    <form action="{{ route('questionnaire.store') }}" method="POST">
+                    <form action="{{ route('questionnaire.update', $data['id']) }}" method="POST">
                         @csrf
+                        @method('put')
                         <div class="form-group mb-3">
                             <label for="question">Pertanyaan</label>
                             <input id="question" type="text" name="question" class="form-control"
