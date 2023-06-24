@@ -7,7 +7,7 @@
     <title>SIENDRA | KPID SUMSEL</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ asset('posdash/assets/images/favicon.ico') }}" />
+    <link rel="shortcut icon" href="{{ asset('images/logosi.png') }}"  />
     <link rel="stylesheet" href="{{ asset('posdash/assets/css/backend-plugin.min.css') }}">
     <link rel="stylesheet" href="{{ asset('posdash/assets/css/backend.css?v=1.0.0') }}">
     <link rel="stylesheet" href="{{ asset('posdash/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css') }}">
