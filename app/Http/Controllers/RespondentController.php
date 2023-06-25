@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Respondent;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Carbon;
+use App\Models\QuestionnaireAnswer;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -57,6 +59,51 @@ class RespondentController extends Controller
 
     public function store(Request $request)
     {
+        try {
+            DB::beginTransaction();
+
+            $request->validate([
+                'name' => 'required',
+            ]);
+
+            $input = $request->all();
+
+            $respondent = Respondent::create($input);
+
+            // Create Answer
+            if ($questionnaire_id = $request->name) {
+                for ($i  = 0; $i < count($questionnaire_id); $i++) {
+                    if ($request->questionnaire_option_id) {
+                        $data = [
+                            'respondent_id' => $respondent->id,
+                            'questionnaire_id' => Crypt::decrypt($request->questionnaire_id[$i]),
+                            'questionnaire_option_id' => Crypt::decrypt($request->questionnaire_option_id[$i])
+                        ];
+                    } elseif ($request->answer_essay) {
+                        $data = [
+                            'respondent_id' => $respondent->id,
+                            'questionnaire_id' => Crypt::decrypt($request->questionnaire_id[$i]),
+                            'essay' => Crypt::decrypt($request->answer_essay[$i])
+                        ];
+                    }
+                    QuestionnaireAnswer::create($data);
+                }
+            }
+
+            // Save Data
+            DB::commit();
+
+            // Alert & Redirect
+            Alert::toast('Data Berhasil Disimpan', 'success');
+            return redirect()->back();
+        } catch (\Exception $e) {
+            // If Data Error
+            DB::rollBack();
+
+            // Alert & Redirect
+            Alert::toast('Data Gagal Disimpan', 'error');
+            return redirect()->back()->withInput()->with('error', 'Data Tidak Berhasil Diperbarui' . $e->getMessage());
+        }
     }
 
     public function update($id, Request $request)

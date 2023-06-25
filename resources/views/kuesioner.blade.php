@@ -1,631 +1,289 @@
-
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
-    <link rel="stylesheet" href="{{ asset('style.css') }}">
-    <link rel="icon" href="{{ asset('images/logoKPID.png') }}">
+<head>
+    <!-- Site made with Mobirise Website Builder v5.6.13, https://mobirise.com -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="generator" content="Mobirise v5.6.13, mobirise.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image:src" content="" />
+    <meta property="og:image" content="" />
+    <meta name="twitter:title" content="Home" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <link rel="shortcut icon" href="{{ asset('desain/assets/images/logoo.png') }}" type="image/x-icon" />
+    <meta name="description" content="" />
 
+    <title>SIENDRA</title>
+    <link rel="stylesheet" href="{{ asset('desain/assets/web/assets/mobirise-icons2/mobirise2.css') }}" />
+    <link rel="stylesheet" href="{{ asset('desain/assets/bootstrap/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('desain/assets/bootstrap/css/bootstrap-grid.min.css') }}" />
+    <link rel="stylesheet"
+        href="{{ asset('desain/assets/bootstrap/css/bootstrap-reboot.min.css"') }} />
+    <link rel="stylesheet"
+        href="{{ asset('desain/assets/dropdown/css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('desain/assets/socicon/css/styles.css') }}" />
+    <link rel="stylesheet" href="{{ asset('desain/assets/theme/css/style.css') }}" />
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800,900&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Inter:100,200,300,400,500,600,700,800,900&display=swap" />
+    </noscript>
+    <link rel="preload" as="style" href="{{ asset('desain/assets/mobirise/css/mbr-additional.css') }}" />
+    <link rel="stylesheet" href="{{ asset('desain/assets/mobirise/css/mbr-additional.css') }}" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
 
-    <title> SIENDRA | KPID SUMSEL</title>
-  </head>
-  <body>
-    <!-- Navigasi -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark " style="background-color: #6f87d1" >
-      <div class="container">
-        <img class="img-fluid" src="{{ asset('images/logoKPID.png') }}" alt="Logo KPID" width="50" height="50" />
-        <img class="img-fluid" src="img/mi.png" alt="Logo MI" width="50" height="50" />
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#home">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#profil" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Profil </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#tentang">Tentang Manajemen Informatika</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#visi">Visi & Misi</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#pimpinan">Pimpinan Jurusan</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#D3">DIII Manajemen Informatika</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#D4">DIV Manajemen Informatika</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#profil" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> HMJ MI </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#profilhmj">Profil HMJ MI</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#struktur">Struktur Organisasi</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#kegiatan">Kegiatan Organisasi</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- Akhir Navigasi -->
+<body>
+    <section data-bs-version="5.1" class="menu menu3 cid-sFAA5oUu2Y" once="menu" id="menu3-1">
+        <nav class="navbar navbar-dropdown navbar-expand-lg">
+            <div class="container">
+                <div class="navbar-brand">
+                    <span class="navbar-logo">
+                        <img src="{{ asset('desain/assets/images/logokpid.png') }}" alt="Mobirise Website Builder"
+                            style="height: 3rem" />
+                    </span>
 
-    <!-- Home -->
-      <img id ="home" src="img/home.jpg" class="img-fluid" alt="home" />
-    <!-- Akhir Home -->
+                    <span class="navbar-logo">
+                        <img src="{{ asset('desain/assets/images/endra.png') }}" alt="Mobirise Website Builder"
+                            style="height: 6rem" />
+                    </span>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
+                    data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
 
-    <!-- Profil -->
-    <section id="tentang">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col">
-            <h1>TENTANG MANAJEMEN INFORMATIKA</h1>
-            <hr size="5px" width="50%"/>
-          </div>
-        </div>
-        <div class="row text-center">
-          <div class="col">
-            <p>
-              Jurusan Manajemen Informatika didirikan pada tahun 2001, dengan kompetensi utama mahasiswa mampu menggunakan perangkat lunak komputer mulai dari sistem operasi, bahasa pemrograman sampai dengan aplikasi perkantoran,
-              menterjemahkan urutan logika menjadi program aplikasi, merancang transformasi data di bidang bisnis, menjadi pimpinan madya di intansi/perusahaan atau berwirausaha di bidang Pengolahan Data Elektronik. Jurusan Manajemen
-              Informatika Poiteknik Negeri Sriwijaya sudah berdiri selama 19 tahun dan pada tanggal 30 Agustus 2021 nanti menjadi 20 tahun berdirinya Jurusan Manajemen Informatika Politeknik Negeri Sriwijaya.
-            </p>
-          </div>
-        </div>
-        <div class="row text-center">
-          <div class="col">
-            <img src="img/gedungmi.jpg" alt="gedung mi" class="img-thumbnail" width="500" height="500" />
-          </div>
-          <div class="col">
-            <img src="img/gedungpolsri.jpg" alt="gedung mi" class="img-thumbnail" width="450" height="500" />
-          </div>
-        </div>
-        </div>
-      </div>
-      <br><br>
+                        <li class="nav-item">
+                            <a class="nav-link link text-black text-primary display-7" href="index.html#image2-4">DATA
+                                RESPONDEN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link text-black display-7" href="#kuesioner">PERTANYAAN KUESIONER</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </section>
-    <!-- Akhir Profil -->
 
-    <!-- Visi Misi -->
-    <section id="visi">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col">
-            <h2 class= "text-dark bg-light">VISI & MISI <br> MANAJEMEN INFORMATIKA</h2>
-            <hr size="5px" width="50%"/><br />
-            <div class="badge bg-success text-wrap fs-5" style="width: 5rem">VISI</div>
-            <br />
-            <br />
-            <p>Meningkatkan mahasiswa jurusan Manajemen Informatika menjadi mahasiswa yang lebih aktif, kreatif dan solutif serta dapat memberikan kontribusi yang nyata.</p>
-            <br />
-            <div class="badge bg-success text-wrap fs-5" style="width: 5rem">MISI</div>
-            <br />
-            <br />
-            <ul class="list-item">
-              <li>Menciptakan mahasiswa jurusan Manajemen Informatika yang berakhlak mulia, berbudi luhur dan beragama.</li>
-              <br />
-              <li>Membangun hubungan yang harmonis terhadap semua unsur, baik internal maupun eksternal.</li>
-              <br />
-              <li>Berkontribusi sebagai wadah pendamping dan penyalur aspirasi mahasiswa jurusan Manajemen Informatika.</li>
-              <br />
-              <li>Mendukung dan meningkatkan kualitas sumber daya mahasiswa jurusan Manajemen Informatika agar memiliki daya saing dalam bidang akademik maupun non akademik.</li>
-            </ul>
-          </div>
-        </div>
-      </div><br>
-    </section>
-    <!-- Akhir Visi Misi -->
+    <section data-bs-version="5.1" class="header1 cid-sFCAOqBTxa" id="header1-i">
+        <div class="mbr-overlay" style="opacity: 0.4; background-color: rgb(0, 0, 0)"></div>
 
-    <!-- Pimpinan Jurusan-->
-    <section id="pimpinan">
         <div class="container">
-          <div class="row text-center">
-            <div class="col">
-              <h2 class="pimpinanmi">Pimpinan Jurusan Manajemen Informatika</h2>
-              <hr size="5px" width="50%"/><br />
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-12">
+
+                </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <div class="card-group">
-                <div class="card">
-                  <img src="img/Rika.jpg" class="card-img-top" alt="Rika Sadariawati" height="400">
-                  <div class="card-body">
-                    <h5 class="card-title text-center">Rika Sadariawati, S.E., M.Si.</h5>
-                    <hr><h6 class="text-center">Ketua Prodi D-IV Manajemen Informatika</h6>
-                    <p class="card-text text-center">NIP : 197302232003122001</p>
-                  </div>
-                </div>
-                <div class="card">
-                  <img src="img/Indri.png" class="card-img-top" alt="Indri Ariyanti" height="400">
-                  <div class="card-body">
-                    <h5 class="card-title text-center">Dr. Indri Ariyanti, S.E., M.Si.</h5>
-                    <hr><h6 class="text-center">Ketua Jurusan Manajemen Informatika</h6>
-                    <p class="card-text text-center">NIP : 197306032008012008</p>
-                  </div>
-                </div>
-                <div class="card">
-                  <img src="img/Meivi.png" class="card-img-top" alt="Meivi Kusnandar" height="400">
-                  <div class="card-body">
-                    <h5 class="card-title text-center">Meivi Kusnandar, S.Kom., M.Kom.</h5>
-                    <hr><h6 class="text-center">Sekretaris Jurusan Manajemen Informatika</h6>
-                    <p class="card-text text-center">NIP : 197407052002121014</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-  <br><br>
     </section>
-    <!-- Akhir Pimpinan Jurusan-->
 
-    <!-- DIII MI -->
-    <section id="D3">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <h2 class= "text-dark bg-light text-center">KURIKULUM <br> D-III MANAJEMEN INFORMATIKA</h2>
-            <hr size="5px" width="50%"/><br />
-          </div>
+    <section data-bs-version="5.1" class="image2 cid-tI8WNGIm54" id="image2-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-12">
+                    <form action="{{ route('respondent.store') }}" method="post">
+                        @csrf
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Data Responden</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="name">Nama</label>
+                                    <input type="text" id="name" name="name" class="form-control"
+                                        value="{{ old('name') }}" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="gender">Jenis Kelamin </label>
+                                    <select name="gender" id="gender" class="form-select">
+                                        <option value="">Pilih Jenis Kelamin</option>
+                                        @foreach (App\Models\Respondent::GENDER_CHOICE as $key => $value)
+                                            <option value="{{ $key }}">{{ $value }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">No. Handphone</label>
+                                    <input type="text" id="phone" name="phone" class="form-control"
+                                        value="{{ old('phone') }}" required>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="job">Pekerjaan</label>
+                                    <input type="text" id="job" name="job" class="form-control"
+                                        value="{{ old('job') }}" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="age">Umur</label>
+                                    <select name="age" id="age" class="form-select" required>
+                                        <option value="">Pilih Umur</option>
+                                        @foreach (App\Models\Respondent::AGE_CHOICE as $key => $value)
+                                            <option value="{{ $key }}">{{ $value }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="last_education">Pendidikan Terakhir </label>
+                                    <select name="last_education" id="last_education" class="form-select">
+                                        <option value="">Pilih Pendidikan Terakhir </option>
+                                        @foreach (App\Models\Respondent::EDUCATION_CHOICE as $key => $value)
+                                            <option value="{{ $key }}">{{ $value }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="income">Penghasilan</label>
+                                    <select name="income" id="income" class="form-select">
+                                        <option value="">Pilih Penghasilan</option>
+                                        @foreach (App\Models\Respondent::INCOME_CHOICE as $key => $value)
+                                            <option value="{{ $key }}">{{ $value }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">Daerah Kab/kota</label>
+                                    <select name="city" id="city" class="form-select">
+                                        <option value="">Pilih Daerah Kab/Kota</option>
+                                        @foreach (App\Models\Respondent::REGENCY_CHOICE as $key => $value)
+                                            <option value="{{ $key }}">{{ $value }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mt-5" id="kuesioner">
+                            <div class="card-header">
+                                <h4>Kuesioner</h4>
+                            </div>
+                            <div class="card-body">
+                                @php
+                                    $i = 1;
+                                @endphp
+                                @foreach ($data as $item)
+                                    <div class="row mb-3">
+                                        <div class="col-md-11">
+                                            <input type="hidden" name="questionnaire_id[]"
+                                                value="{{ Crypt::encrypt($item->id) }}">
+                                            <h5>{{ $i++ }} {{ $item->question }}</h5>
+                                            @if ($item->questionnaire_options->count())
+                                                @foreach ($item->questionnaire_options as $item2)
+                                                    <div class="form-check">
+                                                        <input type="hidden" name="questionnaire_option_id[]"
+                                                            value="{{ Crypt::encrypt($item2->id) }}">
+                                                        <input class="form-check-input" type="checkbox"
+                                                            name="answer_option[]" id="{{ $item2->id }}">
+                                                        <label class="form-check-label" for="{{ $item2->id }}">
+                                                            {{ $item2->name }}
+                                                        </label>
+                                                    </div>
+                                                @endforeach
+                                            @else
+                                                <textarea name="answer_essay[]" rows="3" class="form-control"></textarea>
+                                            @endif
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                        <br>
+                        <center>
+                            <button type="submit" class="btn btn-primary">Kirim</button>
+                        </center>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="row">
-          <div class="text-center">
-            <img src="img/kurd3.jpg" class="rounded img-fluid" alt="Kurikulum D3" height="1400">
-          </div>
-        </div>
-      </div>
     </section>
-    <!-- Akhir DIII MI -->
 
-    <!-- DIV MI -->
-    <section id="D4">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <h2 class= "text-dark bg-light text-center">KURIKULUM <br> D-IV MANAJEMEN INFORMATIKA</h2>
-            <hr size="5px" width="50%"/><br />
-          </div>
+
+    <hr />
+    <section data-bs-version="5.1" class="footer3 cid-sFAOjz8nX7" once="footers" id="footer3-d">
+        <div class="container">
+            <div class="media-container-row align-center mbr-white">
+                <div class="row social-row">
+                    <div class="social-list align-right pb-2">
+                        <div class="soc-item">
+                            <a href="https://www.instagram.com/kpidsumsel/?hl=id" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"
+                                    style="color: rgb(0, 0, 0); fill: rgb(0, 0, 0)"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://www.facebook.com/kpid.sumsel.7?mibextid=ZbWKwL" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-facebook socicon"
+                                    style="color: rgb(0, 0, 0); fill: rgb(0, 0, 0)"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="mailto:info@site.com" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-twitter socicon"
+                                    style="color: rgb(0, 0, 0); fill: rgb(0, 0, 0)"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="mailto:Kpid.sumsel@yahoo.com" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-mail socicon"
+                                    style="color: rgb(0, 0, 0); fill: rgb(0, 0, 0)"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-copirayt">
+                    <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7">
+                        © Copyright by SIENDRA
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="row">
-          <div class="text-center">
-            <img src="img/kurd4.jpg" class="rounded img-fluid" alt="Kurikulum D4-1" height="1400">
-            <img src="img/kurd42.jpg" class="rounded img-fluid" alt="Kurikulum D4-2" height="1400">
-          </div>
-        </div>
-      </div>
-      <br><br>
     </section>
-    <!-- Akhir DIV MI -->
-
-    <!-- Profil HMJ MI -->
-    <section id="profilhmj">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col">
-            <h2 class="hmj">HIMPUNAN MAHASISWA JURUSAN MANAJEMEN INFORMATIKA</h2>
-            <hr size="5px" width="50%"/><br />
-            <div class="text-center">
-              <img src="img/hmjmi.jpg" class="rounded-circle img-fluid" alt="HMJ MI" width="150">
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col text-center">
-            <br><p>Sebuah himpunan yang menghimpun mahasiswa Manajemen Informatika Politeknik Negeri Sriwijaya. Terdiri dari 91 anggota aktif yang berasal dari program studi d3 dan d4. Salah satu dari 20 organisasi mahasiswa yang ada di KM-POLSRI.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col text-center">
-            <br><h3 class="badge bg-light text-dark text-wrap fs-5" style="width: 5rem">VISI</h3>
-          </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col text-center">
-            <p>Menjadikan Himpunan Mahasiswa Jurusan Manajemen Informatika sebagai wadah mahasiswa jurusan Manajemen Informatika dalam mengembangkan diri guna menciptakan mahasiswa yang kreatif, inovatif, dan berpikir kritis.
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col text-center">
-            <br><h3 class="badge bg-light text-dark text-wrap fs-5" style="width: 5rem">MISI</h3>
-          </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col text-center">
-            <ul class="list-item">
-              <li>1. Berperan sebagai wadah penerima dan penyalur aspirasi mahasiswa jurusan Manajemen Informatika.
-              </li>
-              <br />
-              <li>2. Membangun hubungan yang baik terhadap lingkungan jurusan Manajemen Informatika dan lingkungan Politeknik Negeri Sriwijaya.
-              </li>
-              <br />
-              <li>3. Mendukung dan meningkatkan kualitas sumber daya mahasiswa Manajemen Informatika agar memiliki daya saing dalam bidang akademik maupun non akademik.
-              </li>
-              <br />
-              <li>4. Menciptakan karakter mahasiswa Manajemen Informatika yang agamis dan berakhlak mulia.
-              </li>
-              <br>
-              <li>5. Mempermudah mahasiswa jurusan Manajemen Informatika dalam penyediaan kebutuhan perkuliahan.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <section class="display-7"
+        style="
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: center;
+        display: flex;
+        position: relative;
+        height: 0rem;
+      ">
+        <a href="https://mobiri.se/2871549"
+            style="
+          flex: 1 1;
+          height: 0rem;
+          position: absolute;
+          width: 100%;
+          z-index: 1;
+        "></a>
+        <a style="z-index: 1" href="https://mobirise.com/website-design-software.html"></a>
     </section>
-    <!-- Akhir Profil HMJ MI -->
 
-    <!-- Struktur Organisasi -->
-    <section id="struktur">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <h2 class= "text-dark bg-light text-center">STRUKTUR ORGANISASI <br> HIMPUNAN MAHASISWA JURUSAN MANAJEMEN INFORMATIKA</h2>
-            <hr size="5px" width="50%"/><br />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="text-center">
-              <img src="img/struktur.jpg" class="rounded img-fluid" alt="Struktur HMJ MI" >
-            </div>
-          </div>
-        </div>
-      </div>
-      <br><br>
-    </section>
-    <!-- Akhir Struktur Organisasi -->
+    <script src="{{ asset('desain/assets/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('desain/assets/smoothscroll/smooth-scroll.js') }}"></script>
+    <script src="{{ asset('desain/assets/ytplayer/index.js') }}"></script>
+    <script src="{{ asset('desain/assets/dropdown/js/navbar-dropdown.js') }}"></script>
+    <script src="{{ asset('desain/assets/theme/js/script.js') }}"></script>
 
-    <!-- Struktural -->
-    <section id="struktural">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <h2 class= "text-dark bg-light text-center">BADAN PENGURUS HARIAN <br> (BPH)</h2>
-            <hr size="5px" width="50%"/><br />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="card-group">
-              <div class="col-md-6">
-                <img id="wz" src="img/Waiz.png" class="card-img-top" alt="Waiz" height="300">
-                <div class="card-body">
-                  <p class="card-text text text-center">M. Waiz Al-Qarny <br> Ketua Himpunan HMJ MI</p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <img id="by" src="img/faraby.png" class="card-img-top" alt="Faraby" height="300">
-                <div class="card-body">
-                  <p class="card-text text text-center">Muhammad Faraby<br> Wakil Ketua Himpunan HMJ MI</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row m-4">
-          <div class="col">
-            <div class="card-group">
-              <div class="col-md-3">
-                <img id="bph" src="img/clarisya.png" class="card-img-top" alt="Clarisya" height="300">
-                <div class="card-body">
-                  <p class="card-text text text-center  mt-3">Clarisya Paraswida <br> Wakil Sekretaris Umum HMJ MI</p>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <img id="bph" src="img/risa.png" class="card-img-top mt-3" alt="Risa" height="300">
-                <div class="card-body pb-5">
-                  <p class="card-text text text-center ">Risa Aprilia<br>Sekretaris Umum HMJ MI</p>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <img id="bph" src="img/aurel.png" class="card-img-top" alt="Aurel" height="300">
-                <div class="card-body">
-                  <p class="card-text text text-center  mt-3">Aurelia Putri Omarni<br> Bendahara Umum HMJ MI</p>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <img id="bph" src="img/khoiriyah.png" class="card-img-top" alt="Khoiriyah" height="300">
-                <div class="card-body">
-                  <p class="card-text text text-center mt-3">Khoiriyah Alvirah<br> Wakil  Bendahara Umum <br> HMJ MI</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card text-center m-3">
-          <div class="card-body">
-            <h5 class="card-title">BADAN PENGURUS HARIAN (BPH)</h5>
-            <p class="card-text">Badan Pengurus Harian (BPH) berfungsi sebagai badan pengawas yang mengawasi segala kegiatan yang berhubungan dengan HMJ MI. <br> BPH juga berfungsi sebagai penanggung jawab internal dan eksternal dari HMJ MI.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <h2 class= "text-dark bg-light text-center">PERGURUAN TINGGI DAN KEPEMUDAAN<br> (PTKP)</h2>
-            <hr size="5px" width="50%"/><br />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="card-group">
-              <div class="col-md-6">
-                <img id="rz" src="img/rizkiardian.png" class="card-img-top" alt="Rizki Ardian" height="300">
-                <div class="card-body">
-                  <p class="card-text text text-center">Ahmad Rizki Ardian<br>Koordinator Divisi PTKP</p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <img id="ln" src="img/lauren.png" class="card-img-top" alt="Lauren" height="300">
-                <div class="card-body">
-                  <p class="card-text text text-center">Laurensia Ayu Paramita<br> Wakil Koordinator Divisi PTKP</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card text-center m-3">
-          <div class="card-body">
-            <h5 class="card-title">PERGURUAN TINGGI DAN KEPEMUDAAN (PTKP)</h5>
-            <p class="card-text">Divisi Perguruan Tinggi dan Kepemudaan ( PTKP )Merupakan divisi yang menjadi motor gerakan aspirasi terhadap isu-isu yang terjadi di kalangan Mahasiswa Manajemen Informatika. Selain itu, PTKP juga mengkoordinir sumber daya mahasiswa di bidang akademik guna mewujudkan mahasiswa yang cerdas dan aktif.
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <h2 class= "text-dark bg-light text-center">HUBUNGAN MAHASISWA<br>(HUMAS)</h2>
-            <hr size="5px" width="50%"/><br />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="card-group">
-              <div class="col-md-6">
-                <img id="zw" src="img/zwarna.png" class="card-img-top" alt="Zwarna" height="300">
-                <div class="card-body">
-                  <p class="card-text text text-center">Zwarna Mesyawara<br>Koordinator Divisi HUMAS</p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <img id="sl" src="img/sulaimain.png" class="card-img-top" alt="sulaiman" height="300">
-                <div class="card-body">
-                  <p class="card-text text text-center">Rizky Sulaiman<br> Wakil Koordinator Divisi HUMAS</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card text-center m-3">
-          <div class="card-body">
-            <h5 class="card-title">HUBUNGAN MAHASISWA (HUMAS)</h5>
-            <p class="card-text">Divisi Hubungan Mahasiswa ( HUMAS ) Merupakan divisi yang membangun relasi dan komunikasi yang baik serta bermanfaat antar organisasi di dalam maupun di luar KM Polsri. Selain itu, reputasi dan citra organisasi di pegang oleh HUMAS karena sebagai ujung tombak dari HMJ MI.
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <h2 class= "text-dark bg-light text-center">PENGEMBANGAN SUMBER DAYA MAHASISWA<br> (PSDM)</h2>
-            <hr size="5px" width="50%"/><br />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="card-group">
-              <div class="col-md-6">
-                <img id="kr" src="img/krisna.png" class="card-img-top" alt="Krisna" height="300">
-                <div class="card-body">
-                  <p class="card-text text text-center">Krisna Bayu Pwariwa<br>Koordinator Divisi PSDM</p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <img id="tl" src="img/tilareta.png" class="card-img-top" alt="Tilareta" height="300">
-                <div class="card-body">
-                  <p class="card-text text text-center">Sity Nurisa Tilareta<br> Wakil Koordinator Divisi PSDM</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card text-center m-3">
-          <div class="card-body">
-            <h5 class="card-title">PENGEMBANGAN SUMBER DAYA MAHASISWA (PSDM)</h5>
-            <p class="card-text">PSDM (Pengembangan Sumber Daya Mahasiswa) Merupakan divisi yang mengkoordinir Minat dan bakat Mahasiswa Manajemen Informatika dalam bidang Non Akademik. Selain itu, PSDM juga sebagai divisi yang membantu BPH dalam mengontrol keanggotaan Himpunan guna mengoptimalkan kinerja pengurus HMJ MI.
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <h2 class= "text-dark bg-light text-center">KESEJAHTERAAN MAHASISWA<br> (KESMA)</h2>
-            <hr size="5px" width="50%"/><br />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="card-group">
-              <div class="col-md-6">
-                <img id="jt" src="img/jatiko.png" class="card-img-top" alt="Jatiko" height="300">
-                <div class="card-body">
-                  <p class="card-text text text-center">Jatiko Febrian Ahmad<br>Koordinator Divisi KESMA</p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <img id="aa" src="img/aulia.png" class="card-img-top" alt="Aulia" height="300">
-                <div class="card-body">
-                  <p class="card-text text text-center">Aulia Puja Zahara<br> Wakil Koordinator Divisi KESMA</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card text-center m-3">
-          <div class="card-body">
-            <h5 class="card-title">KESEJAHTERAAN MAHASISWA (KESMA)</h5>
-            <p class="card-text">Divisi Kesejahteraan Mahasiswa ( KESMA ) Merupakan divisi yang berperan menumbuhkan rasa kepedulian sosial serta religius terhadap mahasiswa manajemen informatika. Selain itu, KESMA juga memprakarsai jalannya BBM MI (Bantuan Beasiswa Mahasiswa Manajemen Informatika) guna mensejahterkan Mahasiswa di jurusan Manajemen Informatika.
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <h2 class= "text-dark bg-light text-center">BISNIS DAN KEMITRAAN<br> (BISTRA)</h2>
-            <hr size="5px" width="50%"/><br />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="card-group">
-              <div class="col-md-6">
-                <img id="nl" src="img/nurul.png" class="card-img-top" alt="Nurul" height="300">
-                <div class="card-body">
-                  <p class="card-text text text-center">Nurul Fadhilah<br>Koordinator Divisi BISTRA</p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <img id="pk" src="img/piki.png" class="card-img-top" alt="Piki" height="300">
-                <div class="card-body">
-                  <p class="card-text text text-center">Piki Audina Putri<br> Wakil Koordinator Divisi BISTRA</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card text-center m-3">
-          <div class="card-body">
-            <h5 class="card-title">BISNIS DAN KEMITRAAN (BISTRA)</h5>
-            <p class="card-text">Divisi Bisnis dan Kemitraan ( BISTRA  )Merupakan divisi yg menjadi wadah mahasiswa mengembangkan skill usaha bisnisnya. Selain itu, BISTRA juga melakukan kerjasama kemitraan dan mewadahi pembelajaran dunia marketing bagi Mahasiswa Manajemen Informatika agar mempunyai kemampuan yg berkualitas.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Akhir Struktural -->
+    @include('sweetalert::alert')
+</body>
 
-    <!-- Kegiatan Organisasi -->
-    <section id="kegiatan">
-      <div class="container">
-        <div class="row">
-          <div class="col text-center">
-            <h2 class="kegiatan">KEGIATAN HIMPUNAN <br> MAHASISWA JURUSAN MANAJEMEN INFORMATIKA</h2>
-            <hr size="5px" width="50%"/><br />
-          </div>
-        </div><br>
-        <div class="row">
-          <div class="col">
-            <h4 class="text-center">IT FESTIVAL 2019</h4>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <img src="img/itfest1.jpg" class="rounded mx-auto d-block img-fluid img-thumbnail" alt="IT Festival 1" width="650">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col text-center"><br>
-            <img src="img/itfest2.jpg" class="rounded float img-fluid img-thumbnail" alt="IT Festival 2" width="350">
-            <img src="img/itfest4.jpg" class="rounded float img-fluid img-thumbnail" alt="IT Festival 4" width="350">
-            <img src="img/itfest3.jpg" class="rounded float img-fluid img-thumbnail" alt="IT Festival 3" width="350">
-          </div>
-        </div><br><br>
-        <div class="row">
-          <div class="col text-center">
-            <h4 class="text-center">COV-IT 2020</h4><br>
-            <img src="img/covit.jpg" class="rounded float img-fluid img-thumbnail" alt="COV-IT" width="350">
-          </div>
-        </div><br><br>
-        <div class="row">
-          <div class="col text-center">
-            <h4 class="text-center">SINTAK</h4><br>
-            <img src="img/sintak2.jpg" class="rounded float img-fluid img-thumbnail" alt="SINTAK 2" width="170">
-            <img src="img/sintak1.jpg" class="rounded float img-fluid img-thumbnail" alt="SINTAK 1" width="350">
-            <img src="img/sintak3.jpg" class="rounded float img-fluid img-thumbnail" alt="SINTAK 3" width="170">
-          </div>
-        </div><br><br>
-        <div class="row">
-          <div class="col"></div>
-          <h4 class="text-center">Latihan Dasar Organisasi</h4>
-        </div><br>
-        <div class="row">
-          <div class="col text-center">
-            <img src="img/ldo1.jpg" class="rounded float img-fluid img-thumbnail" alt="LDO1" width="310">
-            <img src="img/ldo2.JPG" class="rounded float img-fluid img-thumbnail" alt="LDO2" width="350">
-            <img src="img/ldo3.JPG" class="rounded float img-fluid img-thumbnail" alt="LDO3" width="350">
-          </div>
-        </div><br><br>
-        <div class="row">
-          <div class="col text-center">
-            <h4>Bantuan Sosial Manajemen Informatika (BAKSO MI)</h4><br>
-            <img src="img/baksomi1.jpg" class="rounded float img-fluid img-thumbnail" alt="BAKSO MI 1" width="170">
-            <img src="img/baksomi2.jpg" class="rounded float img-fluid img-thumbnail" alt="BAKSO MI 2" width="350">
-            <img src="img/baksomi3.jpg" class="rounded float img-fluid img-thumbnail" alt="BAKSO MI 3" width="320">
-          </div>
-        </div><br><br>
-        <div class="row">
-            <div class="col text-center">
-            <h4>WEBINAR BISNIS</h4><br>
-            <img src="img/webinar1.jpg" class="rounded float img-fluid img-thumbnail" alt="WEBINAR 1" width="350">
-            <img src="img/webinar2.jpg" class="rounded float img-fluid img-thumbnail" alt="WEBINAR 2" width="350">
-            <img src="img/webinar3.jpg" class="rounded float img-fluid img-thumbnail" alt="webinar3" width="350">
-            </div>
-        </div><br><br>
-      </div>
-    </section>
-    <!-- Akhir Kegiatan Organisasi -->
-
-    <!-- Contact -->
-    <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col text-center">
-                <h2>CONTACT US</h2>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-md-6"><br>
-            <form>
-              <div class="mb-3">
-                <label for="nama" class="form-label">Nama Lengkap</label>
-                <input type="text" class="form-control" id="nama" aria-describedby="nama">
-              </div>
-              <div class="mb-3">
-                <label for="nim" class="form-label">NIM</label>
-                <input type="text" class="form-control" id="nim" aria-describedby="nim">
-              </div>
-              <div class="mb-3">
-                <label for="kelas" class="form-label">Kelas</label>
-                <input type="text" class="form-control" id="kelas" aria-describedby="kelas">
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email">
-              </div>
-              <div class="mb-3">
-                <label for="kritik" class="form-label">Kritik & Saran</label>
-                <textarea class="form-control" id="kritik" rows="3"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-          </div>
-        </div>
-      </div><br>
-    </section>
-    <!-- Akhir Contact -->
-
-    <!-- Footer -->
-    <footer class="text-center bg-light pb-1">
-      <p><small>MANAJEMEN INFORMATIKA | POLITEKNIK NEGERI SRIWIJAYA</small></p>
-    </footer>
-    <!-- Akhir Footer -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-  </body>
 </html>

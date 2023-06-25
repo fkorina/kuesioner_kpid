@@ -6,6 +6,7 @@ use App\Http\Controllers\RespondentController;
 use App\Http\Controllers\QuestionnaireController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\RespondentPageController;
 
 
 /*
@@ -23,10 +24,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/kuesioner', function () {
-    return view('kuesioner');
-});
-
+Route::get('/respondentpage', [RespondentPageController::class, 'index'])->name('respondent_page');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

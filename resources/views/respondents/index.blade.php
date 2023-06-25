@@ -8,8 +8,7 @@
         <div class="x_panel">
             <div class="x_content">
                 <a class="text-end btn btn-sm btn-outline-info" href="{{ route('respondent.create') }}">
-                    <i
-                    class="fa fa-plus"></i> Tambah Data</a>
+                    <i class="fa fa-plus"></i> Tambah Data</a>
                 <div class="table-responsive">
                     <table class="table table-striped jambo_table bulk_action">
                         <thead>
@@ -26,12 +25,11 @@
                                 <th class="column-title">Pendidikan Terakhir</th>
                                 <th class="column-title">Penghasilan </th>
                                 <th class="column-title">Kota/Kabupaten</th>
-                                <
-                                </th>
-                                <th class="bulk-actions" colspan="7">
-                                    <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span
-                                            class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
-                                </th>
+                                < </th>
+                                    <th class="bulk-actions" colspan="7">
+                                        <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span
+                                                class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
+                                    </th>
                             </tr>
                         </thead>
 

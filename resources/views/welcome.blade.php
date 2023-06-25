@@ -92,7 +92,7 @@
                         <strong>Klik mulai untuk segera mengisi kuesioner</strong>&nbsp;
                     </p>
                     <div class="mbr-section-btn mt-3">
-                        <a class="btn btn-black display-4" href="index.html#content4-6">Mulai</a>
+                        <a class="btn btn-black display-4" href="{{ route('respondent_page') }}">Mulai</a>
                     </div>
                 </div>
             </div>
@@ -226,7 +226,7 @@
                             </a>
                         </div>
                         <div class="soc-item">
-                            <a href="mailto:info@site.com" target="_blank">
+                            <a href="https://twitter.com/kpid_sumsel?s=11" target="_blank">
                                 <span class="mbr-iconfont mbr-iconfont-social socicon-twitter socicon"
                                     style="color: rgb(0, 0, 0); fill: rgb(0, 0, 0)"></span>
                             </a>

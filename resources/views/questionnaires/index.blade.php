@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-md-12 mb-4 mt-1">
             <div class="d-flex flex-wrap justify-content-between align-items-center">
-                <h4 class="font-weight-bold">Kuesioner</h4>
+                <h4 class="font-weight-bold">Kuesioner oiiii</h4>
             </div>
         </div>
         <div class="col-lg-12 col-md-12">
