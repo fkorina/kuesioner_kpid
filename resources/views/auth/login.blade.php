@@ -7,7 +7,7 @@
     <title>SIENDRA | KPID SUMSEL</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ asset('posdash/assets/images/favicon.ico') }}" />
+    <link rel="shortcut icon" href="{{ asset('desain/assets/images/logokpid.png') }}" />
     <link rel="stylesheet" href="{{ asset('posdash/assets/css/backend-plugin.min.css') }}">
     <link rel="stylesheet" href="{{ asset('posdash/assets/css/backend.css?v=1.0.0') }}">
     <link rel="stylesheet" href="{{ asset('posdash/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css') }}">
@@ -54,13 +54,12 @@
                                                     <div class="col-lg-12">
                                                         <div class="floating-label form-group">
                                                             <input class="floating-input form-control" name="password"
-                                                                type="password" value= "{{ old('password') }}">
-                                                                @error('password')
+                                                                type="password" value="{{ old('password') }}">
+                                                            @error('password')
                                                                 <span class="text-danger">
                                                                     {{ $message }}
                                                                 </span>
-
-                                                                @enderror
+                                                            @enderror
                                                             <label>Kata Sandi</label>
                                                         </div>
                                                     </div>

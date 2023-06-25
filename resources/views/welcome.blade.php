@@ -11,7 +11,7 @@
     <meta property="og:image" content="" />
     <meta name="twitter:title" content="Home" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-    <link rel="shortcut icon" href="{{ asset('desain/assets/images/logoo.png') }}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ asset('desain/assets/images/logokpid.png') }}" type="image/x-icon" />
     <meta name="description" content="" />
 
     <title>SIENDRA</title>
@@ -63,7 +63,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
                         <li class="nav-item">
-                            <a class="nav-link link text-black display-7" href="index.html">Beranda</a>
+                            <a class="nav-link link text-black display-7" href="">Beranda</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link link text-black text-primary display-7"

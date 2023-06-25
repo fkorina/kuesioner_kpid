@@ -1,7 +1,7 @@
 <div class="iq-sidebar sidebar-default">
     <div class="iq-sidebar-logo d-flex align-items-center justify-content-between">
         <a href="../backend/index.html" class="header-logo">
-            <img src={{ asset('desain/assets/images/endra.png') }} class="img-fluid rounded-normal light-logo"
+            <img src={{ asset('desain/assets/images/logokpid.png') }} class="img-fluid rounded-normal light-logo"
                 alt="logo" />
             <h5 class="logo-title light-logo ml-3">SIENDRA</h5>
         </a>

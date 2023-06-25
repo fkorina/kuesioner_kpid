@@ -7,7 +7,7 @@
     <title>SIENDRA | KPID SUMSEL</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ asset('desain/assets/images/logoo.png') }}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ asset('desain/assets/images/logokpid.png') }}" type="image/x-icon" />
     <link rel="stylesheet" href="{{ asset('posdash/assets/css/backend-plugin.min.css') }}">
     <link rel="stylesheet" href="{{ asset('posdash/assets/css/backend.css?v=1.0.0') }}">
     <link rel="stylesheet" href="{{ asset('posdash/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css') }}">
@@ -38,7 +38,7 @@
                     <div class="iq-navbar-logo d-flex align-items-center justify-content-between">
                         <i class="ri-menu-line wrapper-menu"></i>
                         <a href="backend/index.html" class="header-logo">
-                            <img src="{{ asset('desain/assets/images/logoo.png') }}" class="img-fluid rounded-normal"
+                            <img src="{{ asset('desain/assets/images/logokpid.png') }}" class="img-fluid rounded-normal"
                                 alt="logo">
                             <h5 class="logo-title ml-3">SIENDRA</h5>
                         </a>
