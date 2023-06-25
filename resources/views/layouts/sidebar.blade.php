@@ -1,7 +1,7 @@
 <div class="iq-sidebar sidebar-default">
     <div class="iq-sidebar-logo d-flex align-items-center justify-content-between">
         <a href="../backend/index.html" class="header-logo">
-            <img src={{ asset('images/SIENDRA.png') }} class="img-fluid rounded-normal light-logo"
+            <img src={{ asset('desain/assets/images/endra.png') }} class="img-fluid rounded-normal light-logo"
                 alt="logo" />
             <h5 class="logo-title light-logo ml-3">SIENDRA</h5>
         </a>
@@ -100,8 +100,8 @@
                 <li class=" ">
                     <a href="#report" class="collapsed" data-toggle="collapse" aria-expanded="false">
                         <svg class="svg-icon" id="p-dash10" width="20" height="20"
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                             <circle cx="8.5" cy="7" r="4"></circle>
                             <polyline points="17 11 19 13 23 9"></polyline>
