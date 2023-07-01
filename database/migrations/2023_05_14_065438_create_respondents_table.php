@@ -17,9 +17,9 @@ return new class extends Migration
             $table->string('gender')->comment('jenis kelamin');
             $table->string('phone')->comment('no hp');
             $table->string('job')->comment('pekerjaan');
-            $table->integer('age')->comment('umur');
+            $table->string('age')->comment('umur');
             $table->string('last_education')->comment('pendidikan terakhir');
-            $table->bigInteger('income')->comment('penghasilan');
+            $table->string('income')->comment('penghasilan');
             $table->string('city')->comment('kabupaten/kota');
             $table->timestamps();
         });

@@ -60,7 +60,6 @@ class Respondent extends Model
     const GENDER_CHOICE = [
         self::GENDER_LAKILAKI => self::GENDER_LAKILAKI,
         self::GENDER_PEREMPUAN  => self::GENDER_PEREMPUAN,
-
     ];
 
 
@@ -104,8 +103,5 @@ class Respondent extends Model
         self::INCOME_SATU => self::INCOME_SATU,
         self::INCOME_LIMA => self::INCOME_LIMA,
         self::INCOME_DIATAS_LIMA => self::INCOME_DIATAS_LIMA,
-
-
-
     ];
 }

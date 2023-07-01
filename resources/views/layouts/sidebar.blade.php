@@ -1,6 +1,6 @@
 <div class="iq-sidebar sidebar-default">
     <div class="iq-sidebar-logo d-flex align-items-center justify-content-between">
-        <a href="../backend/index.html" class="header-logo">
+        <a href="#" class="header-logo">
             <img src={{ asset('desain/assets/images/logokpid.png') }} class="img-fluid rounded-normal light-logo"
                 alt="logo" />
             <h5 class="logo-title light-logo ml-3">SIENDRA</h5>
@@ -73,13 +73,8 @@
                     </a>
                     <ul id="respondent" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
                         <li class="">
-                            <a href="{{ route('respondent.index') }}"> <i class="las la-minus"></i><span>Data
+                            <a href="{{ route('respondent.index') }}"> <i class="las la-minus"></i><span>Data Jawaban
                                     Responden</span> </a>
-                        </li>
-                        <li class="">
-                            <a href="../backend/page-list-users.html"> <i class="las la-minus"></i><span>Jawaban
-                                    Kuesioner</span>
-                            </a>
                         </li>
                     </ul>
                 </li>

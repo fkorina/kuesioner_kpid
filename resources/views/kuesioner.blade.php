@@ -63,9 +63,12 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
-
                         <li class="nav-item">
-                            <a class="nav-link link text-black text-primary display-7" href="index.html#image2-4">DATA
+                            <a class="nav-link link text-black text-primary display-7" href="{{ url('/') }}">
+                                BERANDA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link text-black text-primary display-7" href="#image2-4">DATA
                                 RESPONDEN</a>
                         </li>
                         <li class="nav-item">
@@ -100,6 +103,9 @@
                                 <h4>Data Responden</h4>
                             </div>
                             <div class="card-body">
+                                @if (session('error'))
+                                    <p>{{ session('error') }}</p>
+                                @endif
                                 <div class="form-group">
                                     <label for="name">Nama</label>
                                     <input type="text" id="name" name="name" class="form-control"
@@ -118,7 +124,7 @@
 
                                 <div class="form-group">
                                     <label for="phone">No. Handphone</label>
-                                    <input type="text" id="phone" name="phone" class="form-control"
+                                    <input type="number" id="phone" name="phone" class="form-control"
                                         value="{{ old('phone') }}" required>
                                 </div>
 
@@ -141,7 +147,7 @@
 
                                 <div class="form-group">
                                     <label for="last_education">Pendidikan Terakhir </label>
-                                    <select name="last_education" id="last_education" class="form-select">
+                                    <select name="last_education" id="last_education" class="form-select" required>
                                         <option value="">Pilih Pendidikan Terakhir </option>
                                         @foreach (App\Models\Respondent::EDUCATION_CHOICE as $key => $value)
                                             <option value="{{ $key }}">{{ $value }}</option>
@@ -181,22 +187,23 @@
                                 @foreach ($data as $item)
                                     <div class="row mb-3">
                                         <div class="col-md-11">
-                                            <input type="hidden" name="questionnaire_id[]"
-                                                value="{{ Crypt::encrypt($item->id) }}">
                                             <h5>{{ $i++ }} {{ $item->question }}</h5>
                                             @if ($item->questionnaire_options->count())
+                                                <input type="hidden" name="questionnaire_id_option[]"
+                                                    value="{{ $item->id }}">
                                                 @foreach ($item->questionnaire_options as $item2)
                                                     <div class="form-check">
-                                                        <input type="hidden" name="questionnaire_option_id[]"
-                                                            value="{{ Crypt::encrypt($item2->id) }}">
                                                         <input class="form-check-input" type="checkbox"
-                                                            name="answer_option[]" id="{{ $item2->id }}">
+                                                            name="questionnaire_option_id[]" id="{{ $item2->id }}"
+                                                            value="{{ $item2->id }}">
                                                         <label class="form-check-label" for="{{ $item2->id }}">
                                                             {{ $item2->name }}
                                                         </label>
                                                     </div>
                                                 @endforeach
                                             @else
+                                                <input type="hidden" name="questionnaire_id_essay[]"
+                                                    value="{{ $item->id }}">
                                                 <textarea name="answer_essay[]" rows="3" class="form-control"></textarea>
                                             @endif
                                         </div>

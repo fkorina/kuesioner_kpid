@@ -28,33 +28,23 @@ class RespondentController extends Controller
         $model = Respondent::query();
         return DataTables::of($model)
             ->addColumn('action', function ($data) {
-                $url_show = route('respondent.show');
-                $url_edit = route('respondent.edit');
-                $url_delete = route('respondent.destroy');
+                $url_show = route('respondent.show', Crypt::encrypt($data['id']));
 
                 $btn = "<div class='btn-group'>";
-                $btn .= "<a href='$url_show' class = 'btn btn-outline-primary btn-sm text-nowrap'><i class='fas fa-info mr-2'></i> Lihat</a>";
-                $btn .= "<a href='$url_edit' class = 'btn btn-outline-info btn-sm text-nowrap'><i class='fas fa-edit mr-2'></i> Edit</a>";
-                $btn .= "<a href='$url_delete' class = 'btn btn-outline-danger btn-sm text-nowrap' data-confirm-delete='true'><i class='fas fa-trash mr-2'></i> Hapus</a>";
+                $btn .= "<a href='$url_show' class = 'btn btn-outline-primary btn-sm text-nowrap'><i class='fas fa-info mr-2'></i> Detail</a>";
                 $btn .= "</div>";
+
+                return $btn;
             })
             ->toJson();
     }
 
-
-    public function create()
-    {
-        $respondent = Respondent::all();
-        return view('respondents.add', compact('respondent'));
-    }
-
-    public function edit($id)
+    public function show($id)
     {
         $id = Crypt::decrypt($id);
         $data = Respondent::find($id);
-        $student = Respondent::all();
 
-        return view('respondent.edit', compact('data', 'respondent'));
+        return view('respondents.show', compact('data'));
     }
 
     public function store(Request $request)
@@ -64,6 +54,13 @@ class RespondentController extends Controller
 
             $request->validate([
                 'name' => 'required',
+                'gender' => 'required',
+                'phone' => 'required',
+                'job' => 'required',
+                'age' => 'required',
+                'last_education' => 'required',
+                'income' => 'required',
+                'city' => 'required',
             ]);
 
             $input = $request->all();
@@ -71,22 +68,26 @@ class RespondentController extends Controller
             $respondent = Respondent::create($input);
 
             // Create Answer
-            if ($questionnaire_id = $request->name) {
-                for ($i  = 0; $i < count($questionnaire_id); $i++) {
-                    if ($request->questionnaire_option_id) {
-                        $data = [
-                            'respondent_id' => $respondent->id,
-                            'questionnaire_id' => Crypt::decrypt($request->questionnaire_id[$i]),
-                            'questionnaire_option_id' => Crypt::decrypt($request->questionnaire_option_id[$i])
-                        ];
-                    } elseif ($request->answer_essay) {
-                        $data = [
-                            'respondent_id' => $respondent->id,
-                            'questionnaire_id' => Crypt::decrypt($request->questionnaire_id[$i]),
-                            'essay' => Crypt::decrypt($request->answer_essay[$i])
-                        ];
-                    }
-                    QuestionnaireAnswer::create($data);
+            $questionnaire_id_option = $request->questionnaire_id_option;
+            $questionnaire_id_essay = $request->questionnaire_id_essay;
+
+            if (!empty($questionnaire_id_option)) {
+                for ($i = 0; $i < count($questionnaire_id_option); $i++) {
+                    QuestionnaireAnswer::create([
+                        'respondent_id' => $respondent->id,
+                        'questionnaire_id' => $questionnaire_id_option[$i],
+                        'questionnaire_option_id' => $request->questionnaire_option_id[$i]
+                    ]);
+                }
+            }
+
+            if (!empty($questionnaire_id_essay)) {
+                for ($i = 0; $i < count($questionnaire_id_essay); $i++) {
+                    QuestionnaireAnswer::create([
+                        'respondent_id' => $respondent->id,
+                        'questionnaire_id' => $questionnaire_id_essay[$i],
+                        'essay' => $request->answer_essay[$i]
+                    ]);
                 }
             }
 
@@ -104,10 +105,6 @@ class RespondentController extends Controller
             Alert::toast('Data Gagal Disimpan', 'error');
             return redirect()->back()->withInput()->with('error', 'Data Tidak Berhasil Diperbarui' . $e->getMessage());
         }
-    }
-
-    public function update($id, Request $request)
-    {
     }
 
     public function destroy($id)

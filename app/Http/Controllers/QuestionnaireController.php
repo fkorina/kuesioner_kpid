@@ -70,7 +70,6 @@ class QuestionnaireController extends Controller
 
             $questionnaire = Questionnaire::create($input);
 
-
             // Create Questionnaire Option
             if ($questionnaire_option_name = $request->name) {
                 for ($i  = 0; $i < count($questionnaire_option_name); $i++) {

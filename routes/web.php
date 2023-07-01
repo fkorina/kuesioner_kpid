@@ -34,6 +34,7 @@ Route::group(['controller' => RespondentController::class, 'prefix' => 'responde
     Route::get('/datatable', 'datatable')->name('datatable');
     Route::get('/', 'index')->name('index');
     Route::get('/create', 'create')->name('create');
+    Route::get('/show/{id}', 'show')->name('show');
     Route::get('/edit/{id}', 'edit')->name('edit');
     Route::post('/store', 'store')->name('store');
     Route::put('/update/{id}', 'update')->name('update');

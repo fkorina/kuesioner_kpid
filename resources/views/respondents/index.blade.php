@@ -4,51 +4,45 @@
 @endsection
 
 @section('content')
-    <div class="col-md-12 col-sm-12  ">
-        <div class="x_panel">
-            <div class="x_content">
-                <a class="text-end btn btn-sm btn-outline-info" href="{{ route('respondent.create') }}">
-                    <i class="fa fa-plus"></i> Tambah Data</a>
-                <div class="table-responsive">
-                    <table class="table table-striped jambo_table bulk_action">
-                        <thead>
-                            <tr class="headings">
-                                <th>
-                                    <input type="checkbox" id="check-all" class="flat">
-                                </th>
-                                <th class="column-title">No. </th>
-                                <th class="column-title">Nama </th>
-                                <th class="column-title">Jenis Kelamin</th>
-                                <th class="column-title">Nomor HP</th>
-                                <th class="column-title">Pekerjaan </th>
-                                <th class="column-title">Umur </th>
-                                <th class="column-title">Pendidikan Terakhir</th>
-                                <th class="column-title">Penghasilan </th>
-                                <th class="column-title">Kota/Kabupaten</th>
-                                < </th>
-                                    <th class="bulk-actions" colspan="7">
-                                        <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span
-                                                class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
-                                    </th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-
-
-
-
-
-                        </tbody>
-                    </table>
+    <div class="row">
+        <div class="col-md-12 mb-4 mt-1">
+            <div class="d-flex flex-wrap justify-content-between align-items-center">
+                <h4 class="font-weight-bold">Jawaban Responden</h4>
+            </div>
+        </div>
+        <div class="col-lg-12 col-md-12">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between">
+                            <div class="header-title">
+                                <h4 class="card-title">Manajemen Jawaban Responden</h4>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table id="data-table" class="table table-striped table-bordered" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Aksi</th>
+                                            <th>Nama</th>
+                                            <th>Jenis Kelamin</th>
+                                            <th>No. Telepon</th>
+                                            <th>Kota/Kabupaten</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-
             </div>
         </div>
     </div>
 @endsection
-
 
 @section('js_after')
     <script>
@@ -66,11 +60,11 @@
                 serverSide: true,
                 destroy: true,
                 order: [
-                    [4, 'desc']
+                    [0, 'desc']
                 ],
                 columns: [{
-                        "data": null,
-                        "sortable": false,
+                        data: null,
+                        sortable: false,
                         searchable: false,
                         render: function(data, type, row, meta) {
                             return meta.row + meta.settings._iDisplayStart + 1;
@@ -78,37 +72,21 @@
                     },
                     {
                         name: 'action',
-                        data: 'action'
+                        data: 'action',
+                        sortable: false,
+                        searchable: false,
                     },
                     {
                         name: 'name',
                         data: 'name'
                     },
                     {
-                        name: 'last_education',
-                        data: 'last_education'
-                    },
-
-                    {
-                        name: '',
-                        data: ''
+                        name: 'gender',
+                        data: 'gender'
                     },
                     {
-                        name: 'job',
-                        data: 'job'
-                    },
-                    {
-                        name: 'age',
-                        data: 'age'
-                    },
-
-                    {
-                        name: 'last_education',
-                        data: 'last_education'
-                    },
-                    {
-                        name: 'income',
-                        data: 'income'
+                        name: 'phone',
+                        data: 'phone'
                     },
                     {
                         name: 'city',

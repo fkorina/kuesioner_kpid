@@ -37,7 +37,7 @@
                 <nav class="navbar navbar-expand-lg navbar-light p-0">
                     <div class="iq-navbar-logo d-flex align-items-center justify-content-between">
                         <i class="ri-menu-line wrapper-menu"></i>
-                        <a href="backend/index.html" class="header-logo">
+                        <a href="#" class="header-logo">
                             <img src="{{ asset('desain/assets/images/logokpid.png') }}" class="img-fluid rounded-normal"
                                 alt="logo">
                             <h5 class="logo-title ml-3">SIENDRA</h5>
