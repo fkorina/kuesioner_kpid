@@ -104,4 +104,9 @@ class Respondent extends Model
         self::INCOME_LIMA => self::INCOME_LIMA,
         self::INCOME_DIATAS_LIMA => self::INCOME_DIATAS_LIMA,
     ];
+
+    public function questionnaire_answers()
+    {
+        return $this->hasMany(QuestionnaireAnswer::class, 'respondent_id', 'id');
+    }
 }

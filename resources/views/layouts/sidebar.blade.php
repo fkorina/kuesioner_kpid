@@ -12,7 +12,7 @@
     <div class="data-scrollbar" data-scroll="1">
         <nav class="iq-sidebar-menu">
             <ul id="iq-sidebar-toggle" class="iq-menu">
-                <li class="active">
+                <li class="">
                     <a href="{{ route('home') }}" class="svg-icon">
                         <svg class="svg-icon" id="p-dash1" width="20" height="20"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -114,15 +114,8 @@
                             <a href="{{ route('respondent.index') }}"> <i class="las la-minus"></i><span>Data
                                     Responden</span> </a>
                         </li>
-                        <li class="">
-                            <a href="../backend/page-list-users.html"> <i class="las la-minus"></i><span>Jawaban
-                                    Kuesioner</span>
-                            </a>
-                        </li>
                     </ul>
                 </li>
-
-
             </ul>
         </nav>
     </div>

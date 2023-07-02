@@ -15,4 +15,9 @@ class QuestionnaireAnswer extends Model
     {
         return $this->belongsTo(Questionnaire::class, 'questionnaire_id', 'id');
     }
+
+    public function questionnaire_option()
+    {
+        return $this->belongsTo(QuestionnaireOption::class, 'questionnaire_option_id', 'id');
+    }
 }

@@ -191,6 +191,7 @@
                                             @if ($item->questionnaire_options->count())
                                                 <input type="hidden" name="questionnaire_id_option[]"
                                                     value="{{ $item->id }}">
+                                                    <p class="text-muted"><span class="text-danger">*</span>Centang Salah Satu</p>
                                                 @foreach ($item->questionnaire_options as $item2)
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="checkbox"
