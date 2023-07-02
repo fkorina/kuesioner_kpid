@@ -125,9 +125,6 @@
     <!-- Chart Custom JavaScript -->
     <script src="{{ asset('posdash/assets/js/customizer.js') }}"></script>
 
-    <!-- Chart Custom JavaScript -->
-    <script async src="{{ asset('posdash/assets/js/chart-custom.js') }}"></script>
-
     <!-- app JavaScript -->
     <script src="{{ asset('posdash/assets/js/app.js') }}"></script>
 

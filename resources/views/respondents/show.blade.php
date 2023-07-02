@@ -7,7 +7,8 @@
                 <h4 class="card-title">Data Jawaban Responden</h4>
             </div>
             <div class="text-end">
-                <a href="" class="btn btn-info">Cetak PDF</a>
+                <a target="_blank" href="{{ route('respondent.report_pdf', Crypt::encrypt($data['id'])) }}"
+                    class="btn btn-info">Cetak PDF</a>
                 <a href="{{ route('respondent.index') }}" class="btn btn-warning">Kembali</a>
             </div>
         </div>

@@ -14,7 +14,6 @@ class Respondent extends Model
     protected $guarded = ['id'];
 
     // untuk kota /kabupaten
-
     const REGENCY_PALEMBANG = "Palembang";
     const REGENCY_BANYUASIN = "Banyuasin";
     const REGENCY_EMPAT_LAWANG = "Empat Lawang";

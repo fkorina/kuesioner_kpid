@@ -189,7 +189,7 @@
                         </div>
                         <div class="text-wrapper">
                             <h6 class="card-title mbr-fonts-style mb-1 display-5">
-                                <strong>Sms pengaduan</strong>
+                                <strong>Sms Pengaduan</strong>
                             </h6>
 
                             <p class="mbr-text mbr-fonts-style display-7" style="color: white">081279922900</p>
@@ -232,7 +232,7 @@
                             </a>
                         </div>
                         <div class="soc-item">
-                            <a href="mailto:Kpid.sumsel@yahoo.com" target="_blank">
+                            <a href="mailto:kpidsumsel2020@gmail.com" target="_blank">
                                 <span class="mbr-iconfont mbr-iconfont-social socicon-mail socicon"
                                     style="color: rgb(0, 0, 0); fill: rgb(0, 0, 0)"></span>
                             </a>

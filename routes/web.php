@@ -28,6 +28,7 @@ Route::get('/respondentpage', [RespondentPageController::class, 'index'])->name(
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/print', [App\Http\Controllers\HomeController::class, 'print'])->name('print');
 
 // Respondent
 Route::group(['controller' => RespondentController::class, 'prefix' => 'respondent', 'as' => 'respondent.'], function () {
@@ -35,6 +36,8 @@ Route::group(['controller' => RespondentController::class, 'prefix' => 'responde
     Route::get('/', 'index')->name('index');
     Route::get('/create', 'create')->name('create');
     Route::get('/show/{id}', 'show')->name('show');
+    Route::get('/report_respondent_pdf', 'report_respondent_pdf')->name('report_respondent_pdf');
+    Route::get('/report_pdf/{id}', 'report_pdf')->name('report_pdf');
     Route::get('/edit/{id}', 'edit')->name('edit');
     Route::post('/store', 'store')->name('store');
     Route::put('/update/{id}', 'update')->name('update');

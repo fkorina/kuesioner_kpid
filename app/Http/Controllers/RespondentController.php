@@ -10,6 +10,7 @@ use App\Models\QuestionnaireAnswer;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class RespondentController extends Controller
 {
@@ -45,6 +46,29 @@ class RespondentController extends Controller
         $data = Respondent::find($id);
 
         return view('respondents.show', compact('data'));
+    }
+
+    public function report_pdf($id)
+    {
+        $id = Crypt::decrypt($id);
+        $data = Respondent::find($id);
+
+        $pdf = PDF::loadView('respondents.report_pdf', compact('data'));
+
+        $fileName = "Laporan Jawaban Responden.pdf";
+
+        return $pdf->stream($fileName);
+    }
+
+    public function report_respondent_pdf()
+    {
+        $data = Respondent::all();
+
+        $pdf = PDF::loadView('respondents.report_respondent_pdf', compact('data'))->setPaper('A4', 'landscape');
+
+        $fileName = "Laporan Responden.pdf";
+
+        return $pdf->stream($fileName);
     }
 
     public function store(Request $request)
