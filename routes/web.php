@@ -25,6 +25,8 @@ Route::get('/', function () {
 });
 
 Route::get('/respondentpage', [RespondentPageController::class, 'index'])->name('respondent_page');
+Route::get('/respondent_success_page', [RespondentPageController::class, 'success'])->name('respondent_success_page');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

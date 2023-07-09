@@ -232,7 +232,8 @@
                             </a>
                         </div>
                         <div class="soc-item">
-                            <a href="mailto:kpidsumsel2020@gmail.com" target="_blank">
+                            <a href="mailto:faraby710@gmail.com">Email</a>
+                            <a href="mailto: kpidsumsel2020@gmail.com" target="_blank">
                                 <span class="mbr-iconfont mbr-iconfont-social socicon-mail socicon"
                                     style="color: rgb(0, 0, 0); fill: rgb(0, 0, 0)"></span>
                             </a>
@@ -247,6 +248,7 @@
             </div>
         </div>
     </section>
+
     <section class="display-7"
         style="
         padding: 0;

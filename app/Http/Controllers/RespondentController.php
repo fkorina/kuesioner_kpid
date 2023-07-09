@@ -120,7 +120,7 @@ class RespondentController extends Controller
 
             // Alert & Redirect
             Alert::toast('Data Berhasil Disimpan', 'success');
-            return redirect()->back();
+            return redirect()->route('respondent_success_page');
         } catch (\Exception $e) {
             // If Data Error
             DB::rollBack();
@@ -129,9 +129,5 @@ class RespondentController extends Controller
             Alert::toast('Data Gagal Disimpan', 'error');
             return redirect()->back()->withInput()->with('error', 'Data Tidak Berhasil Diperbarui' . $e->getMessage());
         }
-    }
-
-    public function destroy($id)
-    {
     }
 }
