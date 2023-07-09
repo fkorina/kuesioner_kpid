@@ -13,4 +13,8 @@ class RespondentPageController extends Controller
         return view('kuesioner', compact('data'));
     }
 
+    public function success()
+    {
+        return view('success');
+    }
 }

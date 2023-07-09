@@ -18,7 +18,8 @@
                             <div class="header-title">
                                 <h4 class="card-title">Manajemen Jawaban Responden</h4>
                             </div>
-                            <a target="_blank" href="{{ route('respondent.report_respondent_pdf') }}" class="btn btn-primary">Print</a>
+                            <a target="_blank" href="{{ route('respondent.report_respondent_pdf') }}"
+                                class="btn btn-primary">Print</a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
