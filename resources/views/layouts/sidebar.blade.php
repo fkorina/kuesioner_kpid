@@ -48,10 +48,6 @@
                         <li class="">
                             <a href="{{ route('user.index') }}"> <i class="las la-minus"></i><span>Pengguna</span> </a>
                         </li>
-                        <li class="">
-                            <a href="{{ route('role.index') }}"> <i class="las la-minus"></i><span>Peran</span>
-                            </a>
-                        </li>
                     </ul>
                 </li>
                 <li class=" ">

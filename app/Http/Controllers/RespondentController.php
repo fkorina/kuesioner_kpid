@@ -26,13 +26,15 @@ class RespondentController extends Controller
 
     public function datatable()
     {
-        $model = Respondent::query();
+        $model = Respondent::query()->orderBy('id', 'desc');
         return DataTables::of($model)
             ->addColumn('action', function ($data) {
                 $url_show = route('respondent.show', Crypt::encrypt($data['id']));
+                $url_delete = route('respondent.destroy', Crypt::encrypt($data['id']));
 
                 $btn = "<div class='btn-group'>";
                 $btn .= "<a href='$url_show' class = 'btn btn-outline-primary btn-sm text-nowrap'><i class='fas fa-info mr-2'></i> Detail</a>";
+                $btn .= "<a href='$url_delete' class = 'btn btn-outline-danger btn-sm text-nowrap' data-confirm-delete='true'><i class='fas fa-trash mr-2'></i> Hapus</a>";
                 $btn .= "</div>";
 
                 return $btn;
@@ -128,6 +130,32 @@ class RespondentController extends Controller
             // Alert & Redirect
             Alert::toast('Data Gagal Disimpan', 'error');
             return redirect()->back()->withInput()->with('error', 'Data Tidak Berhasil Diperbarui' . $e->getMessage());
+        }
+    }
+
+    public function destroy($id)
+    {
+        try {
+            DB::beginTransaction();
+
+            $respondent = Respondent::find($id);
+
+            // Delete Data
+            $respondent->delete();
+
+            // Save Data
+            DB::commit();
+
+            // Alert & Redirect
+            Alert::toast('Data Berhasil Dihapus', 'success');
+            return redirect()->route('respondent.index');
+        } catch (\Exception $e) {
+            // If Data Error
+            DB::rollBack();
+
+            // Alert & Redirect
+            Alert::toast('Data Tidak Berhasil Dihapus', 'error');
+            return redirect()->back()->with('error', 'Data Tidak Berhasil Dihapus' . $e->getMessage());
         }
     }
 }
