@@ -12,53 +12,109 @@
 </head>
 
 <body>
-    <h5 class="text-center">Laporan Jawaban Responden</h5>
+    <h4 class="text-center">Laporan Jawaban Responden Kuesioner KPID</h4>
     <br>
     <div class="card">
         <div class="card-header">
-            <h4 class="text-title">Data Responden</h4>
+            <h5>Data Pribadi</h5>
         </div>
         <div class="card-body">
-            <div class="row">
-                <div class="col-md-6">
-                    <label>Nama</label>
-                    <h5>{{ $data['name'] }}</h5>
-                </div>
-                <div class="col-md-6">
-                    <label>Jenis Kelamin</label>
-                    <h5>{{ $data['gender'] }}</h5>
-                </div>
-                <div class="col-md-6">
-                    <label>No. Handphone</label>
-                    <h5>{{ $data['phone'] }}</h5>
-                </div>
-                <div class="col-md-6">
-                    <label>Pekerjaan</label>
-                    <h5>{{ $data['job'] }}</h5>
-                </div>
-                <div class="col-md-6">
-                    <label>Umur</label>
-                    <h5>{{ $data['age'] }}</h5>
-                </div>
-                <div class="col-md-6">
-                    <label>Pendidikan Terakhir</label>
-                    <h5>{{ $data['last_education'] }}</h5>
-                </div>
-                <div class="col-md-6">
-                    <label>Penghasilan</label>
-                    <h5>{{ $data['income'] }}</h5>
-                </div>
-                <div class="col-md-6">
-                    <label>Daerah Kab/Kota</label>
-                    <h5>{{ $data['city'] }}</h5>
-                </div>
-            </div>
+            <table>
+                <tr>
+                    <td>
+                        <h6>Nama</h6>
+                    </td>
+                    <td>
+                        <h6> :</h6>
+                    </td>
+                    <td>
+                        <h6 style="margin-left: 10px">{{ $data['name'] }}</h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h6>Jenis Kelamin</h6>
+                    </td>
+                    <td>
+                        <h6> :</h6>
+                    </td>
+                    <td>
+                        <h6 style="margin-left: 10px">{{ $data['gender'] }}</h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h6>No. Handphone</h6>
+                    </td>
+                    <td>
+                        <h6> :</h6>
+                    </td>
+                    <td>
+                        <h6 style="margin-left: 10px">{{ $data['phone'] }}</h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h6>Pekerjaan</h6>
+                    </td>
+                    <td>
+                        <h6> :</h6>
+                    </td>
+                    <td>
+                        <h6 style="margin-left: 10px">{{ $data['job'] }}</h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h6>Umur</h6>
+                    </td>
+                    <td>
+                        <h6> :</h6>
+                    </td>
+                    <td>
+                        <h6 style="margin-left: 10px">{{ $data['age'] }}</h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h6>Pendidikan Terakhir</h6>
+                    </td>
+                    <td>
+                        <h6> :</h6>
+                    </td>
+                    <td>
+                        <h6 style="margin-left: 10px">{{ $data['last_education'] }}</h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h6>Penghasilan</h6>
+                    </td>
+                    <td>
+                        <h6> :</h6>
+                    </td>
+                    <td>
+                        <h6 style="margin-left: 10px">{{ $data['income'] }}</h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h6>Daerah Kab/Kota</h6>
+                    </td>
+                    <td>
+                        <h6>:</h6>
+                    </td>
+                    <td>
+                        <h6 style="margin-left: 10px">{{ $data['city'] }}</h6>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
     <hr>
     <div class="card">
         <div class="card-header">
-            <h4 class="card-title">Jawaban Responden</h4>
+            <h5>Jawaban</h5>
         </div>
         <div class="card-body">
             @php
@@ -66,8 +122,8 @@
             @endphp
             <div class="row mb-3">
                 @foreach ($data['questionnaire_answers'] as $item)
-                    <div class="col-md-6">
-                        <h5>{{ $i++ }}. {{ $item['questionnaire']['question'] }}</h5>
+                    <div class="col-auto">
+                        <h6 align="justify">{{ $i++ }}. {{ $item['questionnaire']['question'] }}</h6>
                         <h6>Jawaban :</h6>
                         @if (!empty($item['questionnaire_option_id']))
                             <p align="justify">{{ $item['questionnaire_option']['name'] }}</p>
@@ -82,3 +138,5 @@
 </body>
 
 </html>
+
+

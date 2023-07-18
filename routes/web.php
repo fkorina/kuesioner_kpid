@@ -70,15 +70,3 @@ Route::group(['controller' => UserController::class, 'prefix' => 'user', 'as' =>
     Route::put('/update/{id}', 'update')->name('update');
     Route::delete('/destroy/{id}', 'destroy')->name('destroy');
 });
-
-// Role
-Route::group(['controller' => RoleController::class, 'prefix' => 'role', 'as' => 'role.'], function () {
-    Route::get('/', 'index')->name('index');
-    Route::get('/datatable', 'datatable')->name('datatable');
-    Route::get('/create', 'create')->name('create');
-    Route::get('/edit/{id}', 'edit')->name('edit');
-    Route::get('/show/{id}', 'show')->name('show');
-    Route::post('/store', 'store')->name('store');
-    Route::put('/update/{id}', 'update')->name('update');
-    Route::delete('/destroy/{id}', 'destroy')->name('destroy');
-});
