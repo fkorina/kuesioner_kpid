@@ -18,8 +18,10 @@
                         <h4 class="card-title text-center text-white">KUESIONER KPID</h4>
                     </div>
                     <div class="card-body">
-                        <h5 class="text-center">TERIMA KASIH TELAH BERPARTISIPASI DALAM SURVEY INI. SEMOGA PENYIARAN
-                            KEDEPAN DAPAT LEBIH SEBAGAI SEBUAH INFORMASI BAGI DAERAH</h5>
+                        <h5 class="text-center">TERIMA KASIH TELAH BERPARTISIPASI DALAM SURVEY INI. </h5>
+                        <br>
+                        <h5 class="text-center">SEMOGA PENYIARAN KEDEPAN DAPAT LEBIH SEBAGAI SEBUAH INFORMASI BAGI
+                            DAERAH.</h5>
                         <div class="text-center mt-5">
                             <a href="{{ url('/') }}" class="text-center btn btn-success">Kembali</a>
                         </div>

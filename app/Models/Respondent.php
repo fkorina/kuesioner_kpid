@@ -79,6 +79,32 @@ class Respondent extends Model
 
     ];
 
+    // untuk pilihan pekerjaan
+    const JOB_BELUM_ATAU_TIDAK_BEKERJA = " Belum atau Tidak bekerja";
+    const JOB_PELAJAR_ATAU_MAHASISWA = "Pelajar atau Mahasiswa";
+    const JOB_WIRASWASTA = "Wiraswasta";
+    const JOB_KARYAWAN_SWASTA = "Karyawan Swasta";
+    const JOB_PNS = "PNS";
+    const JOB_DOSEN = "Dosen";
+    const JOB_GURU = "Guru";
+    const JOB_BURUH = "Buruh";
+    const JOB_NELAYAN = "Nelayan";
+    const JOB_DAN_LAINNYA = "Dan Lainnya";
+
+    const JOB_CHOICE = [
+        self::JOB_BELUM_ATAU_TIDAK_BEKERJA => self::JOB_BELUM_ATAU_TIDAK_BEKERJA,
+        self::JOB_PELAJAR_ATAU_MAHASISWA => self::JOB_PELAJAR_ATAU_MAHASISWA,
+        self::JOB_WIRASWASTA => self::JOB_WIRASWASTA,
+        self::JOB_KARYAWAN_SWASTA => self::JOB_KARYAWAN_SWASTA,
+        self::JOB_PNS => self::JOB_PNS,
+        self::JOB_DOSEN => self::JOB_DOSEN,
+        self::JOB_GURU => self::JOB_GURU,
+        self::JOB_BURUH => self::JOB_BURUH,
+        self::JOB_NELAYAN => self::JOB_NELAYAN,
+        self::JOB_DAN_LAINNYA =>self::JOB_DAN_LAINNYA,
+    ];
+
+
     // untuk pendidikan terakhir
     const EDUCATION_SMP = "SMP atau lebih rendah";
     const EDUCATION_SMA = "SMA";
@@ -93,6 +119,7 @@ class Respondent extends Model
         self::EDUCATION_SARJANA => self::EDUCATION_SARJANA,
         self::EDUCATION_PASCA_SARJANA => self::EDUCATION_PASCA_SARJANA,
     ];
+    
     // untuk penghasilan
     const INCOME_SATU = "< 1.000.000 PERBULAN";
     const INCOME_LIMA = "<5.000.000 PERBULAN";

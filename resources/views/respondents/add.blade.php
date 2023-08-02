@@ -16,7 +16,7 @@
                                     class="required"></span></label>
                             <div class="col-md-6 col-sm-12">
                                 <input class="form-control" data-validate-length-range="6" data-validate-words="2"
-                                    name="name"  required="required" />
+                                    name="name" required="required" />
                             </div>
                         </div>
                         <div class="field item form-group">
@@ -85,11 +85,11 @@
                         </div>
 
 
-                            </div>
-                        </div>
-                    </form>
                 </div>
             </div>
+            </form>
+        </div>
+    </div>
 @endsection
 
 @section('js_after')
