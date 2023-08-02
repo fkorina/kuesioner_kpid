@@ -191,12 +191,14 @@
                                             @if ($item->questionnaire_options->count())
                                                 <input type="hidden" name="questionnaire_id_option[]"
                                                     value="{{ $item->id }}">
-                                                    <p class="text-muted"><span class="text-danger">*</span>Centang Salah Satu</p>
+                                                <p class="text-muted"><span class="text-danger">*</span>Centang Salah
+                                                    Satu</p>
                                                 @foreach ($item->questionnaire_options as $item2)
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="checkbox"
                                                             name="questionnaire_option_id[]" id="{{ $item2->id }}"
-                                                            value="{{ $item2->id }}">
+                                                            value="{{ $item2->id }}"
+                                                            {{ old('questionnaire_option_id') ? 'checked' : '' }}>
                                                         <label class="form-check-label" for="{{ $item2->id }}">
                                                             {{ $item2->name }}
                                                         </label>
@@ -205,7 +207,7 @@
                                             @else
                                                 <input type="hidden" name="questionnaire_id_essay[]"
                                                     value="{{ $item->id }}">
-                                                <textarea name="answer_essay[]" rows="3" class="form-control"></textarea>
+                                                <textarea name="answer_essay[]" rows="3" class="form-control">{{ old('answer_essay') }}</textarea>
                                             @endif
                                         </div>
                                     </div>
@@ -214,7 +216,8 @@
                         </div>
                         <br>
                         <center>
-                            <button type="submit" class="btn btn-primary">Kirim</button>
+                            <button onclick="return confirm('Apakah Data Yang diisi sudah benar?')" type="submit"
+                                class="btn btn-primary">Kirim</button>
                         </center>
                     </form>
                 </div>
