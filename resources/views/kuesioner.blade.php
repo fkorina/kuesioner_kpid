@@ -195,7 +195,7 @@
                                                     Satu</p>
                                                 @foreach ($item->questionnaire_options as $item2)
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox"
+                                                        <input required class="form-check-input" type="checkbox"
                                                             name="questionnaire_option_id[]" id="{{ $item2->id }}"
                                                             value="{{ $item2->id }}"
                                                             {{ old('questionnaire_option_id') ? 'checked' : '' }}>
@@ -207,7 +207,7 @@
                                             @else
                                                 <input type="hidden" name="questionnaire_id_essay[]"
                                                     value="{{ $item->id }}">
-                                                <textarea name="answer_essay[]" rows="3" class="form-control">{{ old('answer_essay') }}</textarea>
+                                                <textarea name="answer_essay[]" rows="3" class="form-control" required>{{ old('answer_essay') }}</textarea>
                                             @endif
                                         </div>
                                     </div>
