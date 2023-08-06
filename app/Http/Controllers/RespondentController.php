@@ -138,6 +138,7 @@ class RespondentController extends Controller
         try {
             DB::beginTransaction();
 
+            $id = Crypt::decrypt($id);
             $respondent = Respondent::find($id);
 
             // Delete Data
