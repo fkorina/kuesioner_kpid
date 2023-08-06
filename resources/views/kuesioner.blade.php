@@ -128,11 +128,15 @@
                                         value="{{ old('phone') }}" required>
                                 </div>
 
-
                                 <div class="form-group">
                                     <label for="job">Pekerjaan</label>
-                                    <input type="text" id="job" name="job" class="form-control"
-                                        value="{{ old('job') }}" required>
+                                    <select name="job" id="job" class="form-select" required>
+                                        <option value="">Pilih Pekerjaan</option>
+                                        @foreach (App\Models\Respondent::JOB_CHOICE as $key => $value)
+                                            <option value="{{ $key }}">{{ $value }}</option>
+                                        @endforeach
+                                    </select>
+
                                 </div>
 
                                 <div class="form-group">
@@ -187,7 +191,7 @@
                                 @foreach ($data as $item)
                                     <div class="row mb-3">
                                         <div class="col-md-11">
-                                            <h5>{{ $i++ }} {{ $item->question }}</h5>
+                                            <h5>{{ $i++ }}. {{ $item->question }}</h5>
                                             @if ($item->questionnaire_options->count())
                                                 <input type="hidden" name="questionnaire_id_option[]"
                                                     value="{{ $item->id }}">
