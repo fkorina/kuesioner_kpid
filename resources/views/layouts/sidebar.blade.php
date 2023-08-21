@@ -12,7 +12,7 @@
     <div class="data-scrollbar" data-scroll="1">
         <nav class="iq-sidebar-menu">
             <ul id="iq-sidebar-toggle" class="iq-menu">
-                <li class="">
+                <li class="{{ Request::is('home') ? 'active' : '' }}">
                     <a href="{{ route('home') }}" class="svg-icon">
                         <svg class="svg-icon" id="p-dash1" width="20" height="20"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -26,7 +26,7 @@
                         <span class="ml-4">Beranda</span>
                     </a>
                 </li>
-                <li class=" ">
+                <li class="{{ Request::is('user') ? 'active' : '' }}">
                     <a href="#people" class="collapsed" data-toggle="collapse" aria-expanded="false">
                         <svg class="svg-icon" id="p-dash8" width="20" height="20"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -44,13 +44,14 @@
                             <path d="M4 4h7a4 4 0 0 1 4 4v12"></path>
                         </svg>
                     </a>
-                    <ul id="people" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                        <li class="">
+                    <ul id="people" class="iq-submenu collapse {{ Request::is('user') ? 'show' : '' }}"
+                        data-parent="#iq-sidebar-toggle">
+                        <li class="{{ Request::is('user') ? 'active' : '' }}">
                             <a href="{{ route('user.index') }}"> <i class="las la-minus"></i><span>Pengguna</span> </a>
                         </li>
                     </ul>
                 </li>
-                <li class=" ">
+                <li class="{{ Request::is('respondent') ? 'active' : '' }}">
                     <a href="#respondent" class="collapsed" data-toggle="collapse" aria-expanded="false">
                         <svg class="svg-icon" id="p-dash10" width="20" height="20"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -67,14 +68,15 @@
                             <path d="M4 4h7a4 4 0 0 1 4 4v12"></path>
                         </svg>
                     </a>
-                    <ul id="respondent" class="iq-submenu collapse" data-parent="#iq-sidebar-toggle">
-                        <li class="">
+                    <ul id="respondent" class="iq-submenu collapse {{ Request::is('respondent') ? 'show' : '' }}"
+                        data-parent="#iq-sidebar-toggle">
+                        <li class="{{ Request::is('respondent') ? 'active' : '' }}">
                             <a href="{{ route('respondent.index') }}"> <i class="las la-minus"></i><span>Data Jawaban
                                     Responden</span> </a>
                         </li>
                     </ul>
                 </li>
-                <li class="">
+                <li class="{{ Request::is('questionnaire') ? 'active' : '' }}">
                     <a href="{{ route('questionnaire.index') }}" class="">
                         <svg class="svg-icon" id="p-dash13" width="20" height="20"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
